@@ -11,7 +11,7 @@ app = Flask(__name__) # making the flask app instance
 CORS(app) # wrapping the app with CORS
 
 # SQLite for local testing; replace with mongoDB later 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///nutritional_oasis.db'  
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///nutrition_oasis.db'  
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable SQLAlchemy event notifications
 
 

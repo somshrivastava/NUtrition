@@ -1,8 +1,8 @@
-# Product Requirement Document: NUtrition Oasis
+# Product Requirement Document: NUtrition
 
 ## Overview
 
-**Project Name:** NUtrition Oasis  
+**Project Name:** NUtrition
 **Project Contributors:** Naman, Som, Rishi, Christopher
 **Objective:** To build a web-based application that allows Northeastern University students to easily view and calculate nutritional facts about the food available in campus dining halls. The app will scrape nutritional data from the campus dining hall website (NU Dining) and present it in a user-friendly interface.
 
@@ -93,7 +93,7 @@
 ### Scraping and Automation:
 
 - **Tool:** selenium
-- **Frequency:** Hourly??? Daily??
+- **Frequency:** Hourly??? Daily??s
 
 ### Hosting:
 
