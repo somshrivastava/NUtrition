@@ -1,0 +1,18 @@
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Makes the footer span the entire width */
+  background-color: #333; /* Example: Background color */
+  color: white; /* Example: Text color */
+  text-align: center; /* Example: Centered text */
+  padding: 10px 0; /* Example: Padding for better spacing */
+  left: 0;
+}
+
+#footer p,
+footer Link {
+  margin: 0px 10px;
+  color: white;
+}

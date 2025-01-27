@@ -1,0 +1,15 @@
+#nav-pannel {
+  position: fixed; /* Fixes the navigation bar to the top of the page */
+  top: 0; /* Aligns the navigation bar to the top */
+  left: 0; /* Starts from the left edge */
+  background-color: rgb(49, 48, 48);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 0rem 0rem;
+}
+
+#nav-pannel img {
+  margin: 7px 15px 0px 15px;
+}
