@@ -25,3 +25,5 @@ pip3 install selenium
 - installing dependencies^
 
 python3 **\_**filename**\_\_\_** to run file.
+
+# file layout
