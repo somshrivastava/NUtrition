@@ -1,4 +1,4 @@
-d # NUtrition-oasis backend
+# NUtrition-oasis backend
 
 action steps:
 
@@ -29,6 +29,5 @@ python3 **\_**filename**\_\_\_** to run file.
 # file layout
 
 - config.py: contains all the setup configurations.
-
-* set up our flask app in this and wrap it around CORS.
-* set up our Database here too.
+  - set up our flask app in this and wrap it around CORS.
+  - set up our Database here too.
