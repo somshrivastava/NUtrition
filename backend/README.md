@@ -22,6 +22,8 @@ pip install flask-cors
 
 pip3 install selenium
 
+pip install python-dotenv
+
 - installing dependencies^
 
 python3 **\_**filename**\_\_\_** to run file.

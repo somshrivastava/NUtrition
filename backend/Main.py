@@ -16,6 +16,9 @@ def get_meals(code):
     
     # add a to_json() function in every model in models.py, so we can convert it to json
     # 400 = server cannot process request
+    
+    if len(str(code)) != 10: 
+        return jsonify({"message" : "incorrect code, cannot get data"}), 400 # bad request
     return jsonify({"message" : "this request is not yet implemented"}), 400
 
 
