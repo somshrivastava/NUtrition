@@ -24,6 +24,19 @@ pip3 install selenium
 
 pip install python-dotenv
 
+pip install sqlalchemy
+pip install flask-sqlalchemy
+
+    ^ temporary database deps
+
+python3 init_db.py
+^ this command initializes the database. if you need to destroy the database instead of initializing it, uncomment the commented line and delete the initialize_database() call
+
+python3 main.py
+
+    ^ this actually starts the server. the server will open up on port 8000,
+    http://localhost:8000/
+
 - installing dependencies^
 
 python3 **\_**filename**\_\_\_** to run file.
