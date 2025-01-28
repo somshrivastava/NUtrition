@@ -87,7 +87,7 @@
 ### Backend:
 
 - **Framework:** Flask with Selenium; CORS; dotenv for safe API key usage
-- **Database:** MongoDB for user data and preferences
+- **Database:** MVP with SQLALchemy; MongoDB for user data and preferences (final prod)
 - **API:** RESTful API for communication between frontend and backend
 
 ### Scraping and Automation:
@@ -117,18 +117,22 @@
 
 ## Milestones and Timeline
 
-### Phase 1: Core MVP (4-6 Weeks)
+### Phase 1: Core MVP (4-5 Weeks)
 
 1. Implement the data scraper for NU Dining website.
-2. Build the nutritional facts dashboard.
-3. Add filtering and sorting functionality.
-4. Enable basic meal tracking without user accounts.
+2. Build the nutritional facts dashboard and frontend
+3. Add filtering and sorting functionality
+4. Enable basic meal tracking without user accounts
+5. implement authentication
+6. HOST the app. @som
 
 ### Phase 2: Enhanced Features (4 Weeks)
 
 1. Add user accounts with saved preferences and history.
 2. Implement personalized recommendations.
 3. Optimize the app for mobile use.
+4. figure out Northeastern Authentication for an extra extension
+5. move from SQLAlchemy to MongoDB Atlas once MVP is up and running.
 
 ### Phase 3: Future Expansion (Optional)
 
