@@ -1,121 +1,132 @@
-from config import db, app # importing our app instance from config.py
-from flask import request, jsonify 
-from models import Meal, Item, User, DiningHall, UserMeal
-# from models import ______ all of our class and database models 
-# we need to import functions from scrape.py so we can call it from the API routes defined here. 
+# ==== main.py file=======
+
+from flask import Flask, request, jsonify
+from config import app, supabase
+from models import Meal, Item, DiningHall, User
 
 
-@app.route("/getone_meals/<int:code>", methods = ["GET"])
-def get_meals_by_code(code):
-    # gets date from the url, which is code, 
-    # date format: YYYYMMDD
-    # we can add another identifier after the date 
-    # YYYYMMDD(CODE) : where the code can help us decipher what dining hall 
-    # and what meal 
-    # do we need a meal specification as well? we can do that 
-    
-    
-    # add a to_json() function in every model in models.py, so we can convert it to json
-    # 400 = server cannot process request
-    
-    if len(str(code)) != 10: 
-        return jsonify({"message" : "incorrect code, cannot get data"}), 400 # bad request
-    return jsonify({"message" : "this request is not yet implemented"}), 400
 
 
-# works! 
-@app.route("/add_meal", methods=["POST"])
+@app.route("/", methods = ["GET"])
+def server_check():  # this is just the root directory, so the developer can check if the server is even up and running
+    return jsonify({
+        "message" : "Server is set up. enter a valid route.",
+        "valid routes" : ["/add_meal [POST]", "/get_meals/<string:date> [GET]", "/add_item [POST]", 
+                          "/get_items/<int:meal_id> [GET]" , "/add_dining_hall [POST]",
+                          "/get_dining_halls [GET]", "add_user [POST]", "/get_user/<string:email> [GET]"]
+        }), 200
+
+@app.route("/add_meal", methods=["POST"])  # This creates an API endpoint at /add_meal that accepts POST requests
 def add_meal():
-    data = request.json
-    # along with every POST request, we get a HTML request body. request.json is
-    # extracting ther json from ther html post request. 
+    # Get the JSON data sent in the request
+    data = request.json  
+
+    # Extract values from the JSON request
+    meal_name = data.get("name")  # namee of the meal
+    meal_date = data.get("date")  # Date of the meal
+    dining_hall_id = data.get("dining_hall_id")  # ID of the dining hall where the meal is served
+
+    # Call the function to insert the meal into the database
+    response = Meal.add_meal(meal_name, meal_date, dining_hall_id)
+
+    # If there's no error, return success with status code 201 (Created)
+    if "error" not in response:
+        return jsonify(response), 201  
+    else:
+        # If there's an error, return an error message with status code 400 (Bad Request)
+        return jsonify(response), 400  
+
     
     
-    try:
-        # Create a new meal
-        meal = Meal(name=data["name"], date=data["date"], dining_hall_id=data["dining_hall_id"])
-        db.session.add(meal)
-        db.session.commit()
-
-        # Add items associated with the meal
-        for item_data in data.get("items", []):
-            item = Item(
-                name=item_data["name"],
-                nutrition_info=item_data.get("nutrition_info"),
-                tags=item_data.get("tags"),
-                meal_id=meal.id,
-            )
-            db.session.add(item)
-
-        db.session.commit()
-        return jsonify({"message": "Meal added successfully!", "meal_id": meal.id}), 201
-
-    except Exception as e:
-        db.session.rollback()
-        return jsonify({"error": str(e)}), 400
     
-        
-
-
-
-# GET METHOD
+#  get meals by date route, calls the method in the Meal class. 
 @app.route("/get_meals/<string:date>", methods=["GET"])
-def get_meals(date): # extract the input from the url 
-    # example request URL: http://127.0.0.1:8000/get_meals/2025-01-27
-    # or http://localhost:8000/get_meals/2025-01-27
+def get_meals(date):
+    response = Meal.get_meals_by_date(date)
     
-    
-    try:
-        meals = Meal.query.filter_by(date=date).all()
-        if not meals:
-            return jsonify({"message": "No meals found for the given date"}), 404
-        return jsonify([meal.to_json() for meal in meals]), 200
+    # Print for debugging (Check Flask terminal output)
+    print(" API Response:", response) # for debugging
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    if isinstance(response, list):
+        return jsonify(response), 200  # Return meals with status 200 OK
+
+    return jsonify(response), 404  # If no meals, return 404 Not Found
+
+
+
+
+
+# add an item to a specific meal. 
+@app.route("/add_item", methods=["POST"])
+def add_item():
+    data = request.json
+    response = Item.add_item(
+        name=data["name"],
+        nutrition_info=data.get("nutrition_info"),
+        tags=data.get("tags"),
+        meal_id=data["meal_id"]
+    )
+    return jsonify(response), 201 if "error" not in response else 400
+
+
+@app.route("/get_items/<int:meal_id>", methods=["GET"])
+def get_items_in_meal(meal_id): 
+    response = Item.get_items_by_meal(meal_id)
+    return jsonify(response), 200 if "error" not in response else 400
+
+
+@app.route("/add_dining_hall", methods=["POST"])
+def add_dining_hall():
+    data = request.json
+    response = DiningHall.add_dining_hall(
+        name=data["name"],
+        location=data.get("location")
+    )
+    return jsonify(response), 201 if "error" not in response else 400
 
 
 @app.route("/get_dining_halls", methods=["GET"])
 def get_dining_halls():
-   
-    try:
-        dining_halls = DiningHall.query.all()
-        return jsonify([hall.to_json() for hall in dining_halls]), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    response = DiningHall.get_all_dining_halls()
+    return jsonify(response), 200 if "error" not in response else 400
 
 
 
-
-
-@app.route("/add_dining_hall", methods=["POST"])
-def add_dining_hall(): 
+@app.route("/add_user", methods=["POST"])
+def add_user():
     data = request.json
-    
-    try: 
-        # Create a new dining hall
-        dining_hall = DiningHall(
-            name=data["name"],
-            location=data.get("location")  # Location is optional
-        )
-        
-        db.session.add(dining_hall)
-        db.session.commit() 
-        
-        return jsonify({
-            "message" : "successfully added dining hall!",
-            "name" : str(data["name"]), 
-            "id" : dining_hall.id
-        }), 201
-        
-        # 201 = successfuly vreated new resource. /
-        
-        
-    except Exception as e: 
-        db.session.rollback()
-        return jsonify({"error" : str(e)}), 400
+    response = User.add_user(
+        name=data["name"],
+        email=data["email"],
+        preferences=data.get("preferences")
+    )
+    return jsonify(response), 201 if "error" not in response else 400
 
-if __name__ == "__main__":
+
+@app.route("/get_user/<string:email>", methods=["GET"])
+def get_user(email):
+    response = User.get_user_by_email(email)
+    return jsonify(response), 200 if "error" not in response else 400
+
+
+
+@app.route("/get_all_meals", methods=["GET"])
+def get_all_meals():
+    response = supabase.table("meals").select("*").execute()
+
+    # Debugging Output
+    print("📢 Supabase Response:", response.data)
+
+    if response.data:
+        return jsonify(response.data), 200
+
+    return jsonify({"error": "No meals found in the database"}), 404
+
+
+    
+    
+
+if __name__ == "__main__": 
     app.run(debug=True, port=8000)
     
     

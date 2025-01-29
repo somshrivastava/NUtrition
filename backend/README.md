@@ -22,6 +22,10 @@ pip install flask-cors
 
 pip3 install selenium
 
+pip install supabase
+
+pip install psycopg2-binary
+
 pip install python-dotenv
 
 pip install sqlalchemy

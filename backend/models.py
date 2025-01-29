@@ -1,91 +1,92 @@
-# contains all of our database models
-from config import db # importing our database model from config.py, we need to initialize this first
+# ====== models.py file========
+
+from config import supabase
+from datetime import datetime # need this 
 
 
-class Meal(db.Model): # here we are saying that Meal is a data model
-    __tablename__ = 'meals'
-    id = db.Column(db.Integer, primary_key=True)  # Unique ID for each meal
-    name = db.Column(db.String(100), nullable = False ) # String(Max_Length); False nullable means value cannot be null
-    date = db.Column(db.String(10), nullable = False) # format: YYYY-MM-DD
-    items = db.relationship('Item', backref = 'meal', lazy = True)
-    dining_hall_id = db.Column(db.Integer, db.ForeignKey('dining_halls.id'), nullable=True)  # Foreign key to DiningHall
-    # backref means you can access Meals through Items and Items through Meals 
-    
-    def to_json(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "date": self.date,
-            "dining_hall": self.dining_hall_id,
-            "items": [item.to_json() for item in self.items],
+class Meal:
+    @staticmethod
+    def add_meal(name, date, dining_hall_id):
+        data = {
+            "name": name,
+            "date": date,
+            "dining_hall_id": dining_hall_id # only valid IDs at the moment: 1 and 2. 1 is steast, 2 is IV
         }
-        
-        
-        
-class Item(db.Model):
-    __tablename__ = 'items'
+        response = supabase.table("meals").insert(data).execute()
+        return response.data if response.data else {"error": response.error}
 
-    id = db.Column(db.Integer, primary_key=True)  # Unique ID for each item
-    name = db.Column(db.String(100), nullable=False)  # Name of the item (e.g., Pasta, Salad)
-    nutrition_info = db.Column(db.Text, nullable=True)  # Nutritional data as a JSON string or plain text
-    meal_id = db.Column(db.Integer, db.ForeignKey('meals.id'), nullable=False)  # Foreign key to Meal
-    tags = db.Column(db.JSON, nullable=True)  # e.g., ["Vegetarian", "Gluten-Free"]
+    @staticmethod
+    def get_meals_by_date(date):
+        try:
+            # Convert input string to a datetime object (YYYY-MM-DD)
+            formatted_date = datetime.strptime(date, "%Y-%m-%d").date()
+
+            # Debugging: Print the formatted date to check its type
+            print("🔍 Querying Supabase for Date:", formatted_date, type(formatted_date))
+
+            # Query Supabase with the correctly formatted date
+            response = supabase.table("meals").select("*").eq("date", formatted_date).execute()
+
+            # Debugging: Print the Supabase response
+            print("🔍 Supabase Response:", response.data)
+
+            if response.data:
+                return response.data
+
+            return {"error": f"No meals found for the given date {date}"}
+        
+        except ValueError:
+            return {"error": "Invalid date format. Please use YYYY-MM-DD."}
 
 
-    def to_json(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "nutrition_info": self.nutrition_info,
-            "tags" : self.tags
+
+
+class Item:
+    @staticmethod
+    def add_item(name, nutrition_info, tags, meal_id):
+        data = {
+            "name": name,
+            "nutrition_info": nutrition_info,
+            "tags": tags,
+            "meal_id": meal_id
         }
-        
-class User(db.Model):
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    preferences = db.Column(db.JSON, nullable=True)  # Store dietary preferences as JSON
+        response = supabase.table("items").insert(data).execute()
+        return response.data if response.data else {"error": response.error}
+
+    @staticmethod
+    def get_items_by_meal(meal_id):
+        response = supabase.table("items").select("*").eq("meal_id", meal_id).execute()
+        return response.data if response.data else {"error": response.error}
+
+class DiningHall:
     
     
-    def to_json(self): 
-        return {
-            "id": self.id, 
-            "name" : self.name, 
-            "email" : self.email, 
-            "preferences": self.preferences, 
+    @staticmethod
+    def add_dining_hall(name, location):
+        data = {
+            "name": name,
+            "location": location
         }
-    
-    
-    
-class UserMeal(db.Model):
-    __tablename__ = 'user_meals'
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    meal_id = db.Column(db.Integer, db.ForeignKey('meals.id'), nullable=False)
-    date = db.Column(db.String(10), nullable=False)  # When the user consumed the meal
-    
-    def to_json(self):
-        return {
-            "id": self.id,
-            "user_id": self.user_id,
-            "meal_id": self.meal_id,
-            "date": self.date,
+        response = supabase.table("dining_halls").insert(data).execute()
+        return response.data if response.data else {"error": response.error}
+
+    @staticmethod
+    def get_all_dining_halls():
+        response = supabase.table("dining_halls").select("*").execute()
+        return response.data if response.data else {"error": response.error}
+
+class User:
+    @staticmethod
+    def add_user(name, email, preferences):
+        data = {
+            "name": name,
+            "email": email,
+            "preferences": preferences
         }
+        response = supabase.table("users").insert(data).execute()
+        return response.data if response.data else {"error": response.error}
 
-
-class DiningHall(db.Model):
-    __tablename__ = 'dining_halls'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    location = db.Column(db.String(200), nullable=True)
-    
-    
-    def to_json(self): 
-        
-        return { 
-            "id" : self.id, 
-            "name": self.name, 
-            "location": self.location
-            }
-
+    @staticmethod
+    def get_user_by_email(email):
+        response = supabase.table("users").select("*").eq("email", email).execute()
+        return response.data[0] if response.data else {"error": response.error}
