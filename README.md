@@ -1,7 +1,3 @@
-# sp25-group-11
+# NUtrition - Oasis Spring 2025 group 11
 
-todo:
-
-- what database? options below:
-  - MongoDB (learning something new and advanced)
-  - just a plain SQL server (less ideal)
+Please read ./PRD.md for our product requirements document, which is a much more detailed explaination of our product.
