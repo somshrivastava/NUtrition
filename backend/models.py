@@ -21,14 +21,11 @@ class Meal:
             # Convert input string to a datetime object (YYYY-MM-DD)
             formatted_date = datetime.strptime(date, "%Y-%m-%d").date()
 
-            # Debugging: Print the formatted date to check its type
-            print("🔍 Querying Supabase for Date:", formatted_date, type(formatted_date))
-
-            # Query Supabase with the correctly formatted date
+            # SQL query in python
             response = supabase.table("meals").select("*").eq("date", formatted_date).execute()
 
             # Debugging: Print the Supabase response
-            print("🔍 Supabase Response:", response.data)
+
 
             if response.data:
                 return response.data

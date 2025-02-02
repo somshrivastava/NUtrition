@@ -9,6 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 def scrape_menu_and_nutrition(target_day="20"):
     driver = webdriver.Chrome()
+   
     driver.get("https://www.nudining.com/public/whats-on-the-menu")
 
     try:
