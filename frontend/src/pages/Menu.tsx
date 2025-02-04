@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./../styles/Menu.scss";
-import LeftArrowSvg from "./../assets/left-arrow.svg";
-import RightArrowSvg from "./../assets/right-arrow.svg";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
+
+import Date from "../components/Date"; 
 
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
@@ -11,12 +11,9 @@ const Menu: React.FC = () => {
 
   return (
     <>
+    <Date/>
       <div className="page">
-        <div className="page-date">
-          <img className="page-date-left-arrow" src={LeftArrowSvg} alt="Left Arrow SVG" />
-          <h2 className="page-date-name">December 22nd, Sunday</h2>
-          <img className="page-date-right-arrow" src={RightArrowSvg} alt="Right Arrow SVG" />
-        </div>
+        
         <div className="page-dining-hall">
           <Dropdown
             value={selectedDiningHall}
