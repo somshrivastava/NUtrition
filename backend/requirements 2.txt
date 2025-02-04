@@ -1,0 +1,1 @@
+# i will add the modules needed here. so someone else on the team can just run pip install -r requirements.txt
