@@ -3,8 +3,7 @@ import "./../styles/Menu.scss";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Foods, FoodStation } from "../schema.type";
-
-import Date from "../components/Date"; 
+import Date from "../components/Date";
 
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
@@ -67,9 +66,8 @@ const Menu: React.FC = () => {
 
   return (
     <>
-    <Date/>
       <div className="page">
-        
+        <Date />
         <div className="page-dining-hall">
           <Dropdown
             value={selectedDiningHall}

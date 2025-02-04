@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./../styles/Menu.scss";
+import "./../styles/Date.scss";
 import LeftArrowSvg from "./../assets/left-arrow.svg";
 import RightArrowSvg from "./../assets/right-arrow.svg";
 
@@ -8,16 +8,13 @@ const Date: React.FC = () => {
 
   return (
     <>
-      <div className="page">
-        <div className="page-date">
-          <img className="page-date-left-arrow" src={LeftArrowSvg} alt="Left Arrow SVG" />
-          <h2 className="page-date-name">December 22nd, Sunday</h2>
-          <img className="page-date-right-arrow" src={RightArrowSvg} alt="Right Arrow SVG" />
-        </div>
+      <div className="date">
+        <img className="date-left-arrow" src={LeftArrowSvg} alt="Left Arrow SVG" />
+        <h2 className="date-name">December 22nd, Sunday</h2>
+        <img className="date-right-arrow" src={RightArrowSvg} alt="Right Arrow SVG" />
       </div>
     </>
   );
 };
 
-
-export default Date; 
+export default Date;
