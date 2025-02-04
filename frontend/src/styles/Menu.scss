@@ -51,22 +51,58 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 
     &-breakfast {
+      width: 33%;
+      margin-right: 0.5rem;
+      border-radius: 0.5rem 0 0 0.5rem;
     }
 
     &-lunch {
+      width: 33%;
+      margin-right: 0.5rem;
+      border-radius: 0;
     }
 
     &-dinner {
+      width: 33%;
+      border-radius: 0 0.5rem 0.5rem 0;
     }
   }
 
-  &-section {
-    &-title {
-    }
+  &-menu {
+    background-color: $background-color;
+    border-radius: 0.25rem;
+    padding: 1rem;
 
-    &-item {
+    &-section {
+      &-title {
+        color: $primary-color;
+        padding-bottom: 1rem;
+      }
+
+      &-items {
+      }
+
+      &-item {
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+          border-bottom: 1px solid white;
+        }
+
+        &-content {
+          width: 75%;
+          &-title {
+            margin-bottom: 0.5rem;
+          }
+
+          &-description {
+          }
+        }
+      }
     }
   }
 }
