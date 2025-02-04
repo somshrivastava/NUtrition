@@ -1,4 +1,4 @@
-@import "./variables";
+@use "./variables" as *;
 
 .header {
   width: 100vw;
@@ -17,5 +17,18 @@
 
   &-menu {
     cursor: pointer;
+  }
+
+  &-logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &-pfp {
+      width: 2.5rem;
+      border-radius: 50%;
+      margin-left: 1rem;
+    }
   }
 }
