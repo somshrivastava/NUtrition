@@ -93,10 +93,10 @@ const Menu: React.FC = () => {
                 <div className="page-menu-section-item">
                   <div className="page-menu-section-item-content">
                     <h3 className="page-menu-section-item-content-title">
-                      English Breakfast Baked Beans (PR) (AG)
+                      {item.name}
                     </h3>
                     <p className="page-menu-section-item-content-description">
-                      Traditional tomato baked beans with maple and spices{" "}
+                      {item.description}
                     </p>
                   </div>
                 </div>

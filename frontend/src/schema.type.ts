@@ -45,8 +45,9 @@ export interface Food {
   description: String;
   foodStation: FoodStation;
   nutritionalInfo: NutritionalInfo;
-  servingSize: Quantity;
   dietaryRestrictions: DietaryRestriction[];
+  servingSize?: Quantity;
+  timeLogged?: String;
 }
 
 export interface DietaryRestriction {
@@ -78,5 +79,5 @@ export interface DailyLog {
   uid: String;
   date: String;
   calorieGoal: Number;
-  foods: Food[];
+  foods: Foods;
 }

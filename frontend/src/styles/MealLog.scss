@@ -1,0 +1,36 @@
+.calorie-count {
+    h1 {
+        color: red; 
+    }
+}
+
+
+.page {
+    width: 100vw;
+    padding: 1.5rem 2rem;
+
+    &-calorie-count{
+        
+    }
+
+    &-calorie-pie-chart{
+
+    }
+
+    &-logged-meals{
+        background-color: white;
+        border-radius: 0.25rem;
+        padding: 1rem;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    }
+
+
+
+}
+
