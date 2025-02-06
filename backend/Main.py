@@ -5,8 +5,6 @@ from config import app, supabase
 from models import Meal, Item, DiningHall, User
 
 
-
-
 @app.route("/", methods = ["GET"])
 def server_check():  # this is just the root directory, so the developer can check if the server is even up and running
     return jsonify({
@@ -128,5 +126,10 @@ def get_all_meals():
 
 if __name__ == "__main__": 
     app.run(debug=True, port=8000)
+    
+    
+    
+    
+    
     
     
