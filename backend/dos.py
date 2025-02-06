@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import StaleElementReferenceException
 import json
+from selenium.webdriver.firefox.options import Options
 
 
 import json 
@@ -113,9 +114,10 @@ def scrape(dining_hall, day, month, meal):
         month: enum int (1-12) inclusive
         meal: enum string: either "Lunch", "Dinner" or "Everyday" 
         '''
+    options = Options()
+    options.headless = True # changing it to headless moce
         
-        
-    driver =  webdriver.Firefox()
+    driver =  webdriver.Firefox(options=options)
     # in my testing, i found that firebox is somehow a lot 
     # better 
     
@@ -309,7 +311,7 @@ def scrape(dining_hall, day, month, meal):
                         "nutritionalInfo": item_nutri_info,
                         "servingSize": serv_size,  
                         "dietaryRestrictions": [],  # Dietary restrictions are missing from source data
-                        "timeLogged": datetime.now().isoformat()
+                        # "timeLogged": datetime.now().isoformat()
                     }
                 
                 
@@ -321,7 +323,7 @@ def scrape(dining_hall, day, month, meal):
         json_object = json.dumps(food_items, indent=4)
         
         # Writing to sample.json
-        with open(f"./real-data/{dining_hall}_{meal}_{month}_{day}", "w") as outfile:
+        with open(f"./real-data/{dining_hall}_{meal}_{month}_{day}_{datetime.now()}.json", "w") as outfile:
             outfile.write(json_object)
         return food_items
                 
@@ -349,7 +351,7 @@ def main():
     }
     
     
-    
+    print(datetime.now())
     print(scrape(dining_halls.get("stwest"), 4, 2, "Lunch"))
     
     
