@@ -1,0 +1,21 @@
+@import "./variables";
+
+.header {
+  width: 100vw;
+  height: 11vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: $background-color;
+  border-radius: 0 0 1.5rem 1.5rem;
+
+  &-logo {
+    cursor: pointer;
+  }
+
+  &-menu {
+    cursor: pointer;
+  }
+}

@@ -12,6 +12,7 @@ import { Button } from "primereact/button";
 import { useAuth } from "../hooks/useAuth";
 import { searchInList, timestamp } from "../util";
 import { NutritionUser } from "../schema.type";
+import "./../styles/Login.scss";
 
 const Login: React.FC = () => {
   const [users, setUsers] = useState<NutritionUser[]>([]);
@@ -68,9 +69,9 @@ const Login: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-column">
-        <Button className="mb-3" label="Login" onClick={handleLogin} />
-        {user ? `Logged in as ${user.displayName}` : "Not logged in"}
+      <div className="login">
+        <Button className="login-button" label="Login" onClick={handleLogin} />
+        {/* {user ? `Logged in as ${user.displayName}` : "Not logged in"}
         <Button className="mt-3 mb-3" label="Logout" onClick={handleLogout} />
         <Button
           className="mt-3 mb-3"
@@ -82,7 +83,7 @@ const Login: React.FC = () => {
           <div key={index}>
             {item.name} {item.lastLoggedIn}
           </div>
-        ))}
+        ))} */}
       </div>
     </>
   );

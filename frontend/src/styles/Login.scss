@@ -1,0 +1,14 @@
+@import "./variables";
+
+.login {
+  width: 100vw;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-button {
+    width: 15rem;
+  }
+}
