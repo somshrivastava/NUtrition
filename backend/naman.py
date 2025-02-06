@@ -8,7 +8,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from models import Item  # Import the Item class from models.py
 
 def scrape_menu(dining_hall, date, meal):
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.get("https://www.nudining.com/public/whats-on-the-menu")
 
     try:
@@ -25,7 +25,7 @@ def scrape_menu(dining_hall, date, meal):
 
         # Select "The Eatery at Stetson East"
         stetson_east_button = wait.until(
-            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'The Eatery at Stetson East')]"))
+            EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'United Table at International Village')]"))
         )
         stetson_east_button.click()
 
@@ -33,7 +33,7 @@ def scrape_menu(dining_hall, date, meal):
         date_picker = driver.find_element(By.ID, "menuDatePicker")
         date_picker.click()
         arrows = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "vc-svg-icon")))
-        arrows[0].click()
+        arrows[1].click()
         time.sleep(2)
 
         day_button_xpath = f"//span[contains(text(),'{date}')]"
@@ -118,6 +118,8 @@ def main():
         print(f"Nutrition: {item['nutrition_info']}")
         print(f"Tags: {item['tags']}")
         print()
+        
+    
 
 if __name__ == "__main__":
     main()

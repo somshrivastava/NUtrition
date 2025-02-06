@@ -5,10 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+import json 
 
 
 def scrape_menu_and_nutrition(target_day="20"):
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
    
     driver.get("https://www.nudining.com/public/whats-on-the-menu")
 
