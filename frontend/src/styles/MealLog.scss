@@ -1,0 +1,74 @@
+@use "./variables" as *;
+
+.page {
+  width: 100vw;
+  padding: 1.5rem 2rem;
+
+  &-calories {
+    &-value {
+      &-consumed {
+      }
+
+      &-goal {
+      }
+    }
+
+    &-bar {
+      &-consumed {
+      }
+    }
+  }
+
+  &-pie-chart {
+  }
+
+  &-legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &-carbohydrates,
+    &-protein,
+    &-fat {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      &-color {
+        width: 2rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    &-carbohydrates {
+      &-color {
+        background-color: $carbohydrates;
+      }
+
+      &-label {
+      }
+    }
+
+    &-protein {
+      &-color {
+        background-color: $protein;
+      }
+
+      &-label {
+      }
+    }
+
+    &-fat {
+      &-color {
+        background-color: $fat;
+      }
+
+      &-label {
+      }
+    }
+  }
+}
