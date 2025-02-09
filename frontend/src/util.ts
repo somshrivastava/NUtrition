@@ -10,3 +10,12 @@ export const searchInList = (list: any[], key: string, value: string) => {
     return null;
   }
 };
+
+export const printDate = (date: Date) => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return date.toLocaleDateString(undefined, options);
+};

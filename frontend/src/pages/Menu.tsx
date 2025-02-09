@@ -3,8 +3,8 @@ import "./../styles/Menu.scss";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Foods, FoodStation } from "../schema.type";
-import Date from "../components/Date";
 import { InputNumber, InputNumberValueChangeEvent } from "primereact/inputnumber";
+import DatePicker from "../components/DatePicker";
 
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
@@ -13,6 +13,7 @@ const Menu: React.FC = () => {
   const foods: Foods = {
     breakfast: [
       {
+        docId: "1",
         name: "English Breakfast Baked Beans",
         description: "Traditional tomato baked beans with maple and spices",
         foodStation: FoodStation.CUCINA,
@@ -35,6 +36,7 @@ const Menu: React.FC = () => {
         ],
       },
       {
+        docId: "2",
         name: "English Breakfast Baked Beans",
         description: "Traditional tomato baked beans with maple and spices",
         foodStation: FoodStation.CUCINA,
@@ -57,6 +59,7 @@ const Menu: React.FC = () => {
         ],
       },
       {
+        docId: "3",
         name: "English Breakfast Baked Beans",
         description: "Traditional tomato baked beans with maple and spices",
         foodStation: FoodStation.CUCINA,
@@ -91,7 +94,7 @@ const Menu: React.FC = () => {
   return (
     <>
       <div className="page">
-        <Date />
+        <DatePicker />
         <div className="page-dining-hall">
           <Dropdown
             value={selectedDiningHall}
@@ -114,7 +117,7 @@ const Menu: React.FC = () => {
             <h1 className="page-menu-section-title">Cucina</h1>
             <div className="page-menu-section-items">
               {foods.breakfast.map((item) => (
-                <div className="page-menu-section-item">
+                <div key={item.docId as React.Key} className="page-menu-section-item">
                   <div className="page-menu-section-item-content">
                     <h3 className="page-menu-section-item-content-title">
                       English Breakfast Baked Beans (PR) (AG)

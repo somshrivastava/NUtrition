@@ -7,6 +7,8 @@ import MealLog from "./pages/MealLog";
 import History from "./pages/History";
 
 function App() {
+  console.clear();
+
   return (
     <>
       <BrowserRouter>

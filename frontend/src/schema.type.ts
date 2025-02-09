@@ -41,6 +41,7 @@ export interface Foods {
 }
 
 export interface Food {
+  docId: String;
   name: String;
   description: String;
   foodStation: FoodStation;
