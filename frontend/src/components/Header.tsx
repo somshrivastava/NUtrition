@@ -20,6 +20,7 @@ const Header: React.FC = () => {
     { label: "Menu", command: () => navigate("/menu") },
     { label: "Meal Log", command: () => navigate("/meal-log") },
     { label: "History", command: () => navigate("/history") },
+    { label: "Feedback", command: () => navigate("/feedback") },
     {
       label: (
         <>

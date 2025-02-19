@@ -1,11 +1,17 @@
 import React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 
-const MacrosChart: React.FC = () => {
+interface InputProps {
+  carbohydrates: number;
+  fat: number;
+  protein: number;
+}
+
+const MacrosChart: React.FC<InputProps> = ({ carbohydrates, fat, protein }) => {
   const data = [
-    { name: "Carbohydrates", value: 32 },
-    { name: "Fat", value: 39 },
-    { name: "Protein", value: 90 },
+    { name: "Carbohydrates", value: carbohydrates },
+    { name: "Fat", value: fat },
+    { name: "Protein", value: protein },
   ];
 
   const COLORS = ["#14B8A6", "#FACC15", "#6D71F9"];

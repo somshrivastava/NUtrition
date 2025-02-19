@@ -1,0 +1,33 @@
+@use "./../styles/variables" as *;
+
+.page {
+  width: 100vw;
+  padding: 1.5rem 2rem;
+
+  &-title {
+    color: $primary-color;
+    padding-bottom: 0.75rem;
+  }
+
+  &-inputs {
+  }
+
+  &-input {
+    &-label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    &-number {
+      margin-bottom: 1rem;
+    }
+
+    &-text {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

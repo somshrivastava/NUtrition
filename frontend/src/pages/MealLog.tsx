@@ -7,6 +7,7 @@ import Meals from "../components/Meals";
 import { InputText } from "primereact/inputtext";
 import { ProgressBar } from "primereact/progressbar";
 import DatePicker from "../components/DatePicker";
+import { data } from "../sample.data";
 
 const MealLog: React.FC = () => {
   return (
@@ -21,9 +22,9 @@ const MealLog: React.FC = () => {
           </div>
           <ProgressBar className="page-calories-bar" value={37}></ProgressBar>
         </div>
-        <MacrosChart />
+        <MacrosChart carbohydrates={33} protein={33} fat={33} />
         <Legend />
-        <Meals />
+        <Meals title="Logged Meals" meals={data} />
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Menu from "./pages/Menu";
 import MealLog from "./pages/MealLog";
 import History from "./pages/History";
+import Feedback from "./pages/Feedback";
 
 function App() {
   console.clear();
@@ -17,6 +18,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/meal-log" element={<MealLog />} />
           <Route path="/history" element={<History />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
     </>

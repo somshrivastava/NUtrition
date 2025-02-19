@@ -29,7 +29,7 @@ export interface Menu {
 }
 
 export interface Quantity {
-  value: Number;
+  value: number;
   unit: String;
 }
 
@@ -78,6 +78,14 @@ export interface NutritionalInfo {
 export interface DailyLog {
   uid: String;
   date: String;
-  calorieGoal: Number;
+  calorieGoal: number;
   foods: Food[];
+}
+
+export interface FeedbackForm {
+  satification: number;
+  issues: String;
+  easiness: String;
+  features: String;
+  recommendation: String;
 }
