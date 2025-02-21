@@ -1,3 +1,5 @@
+@use "./styles/variables" as *;
+
 * {
   box-sizing: border-box !important;
 }
@@ -20,4 +22,59 @@ p {
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+// PrimeReact Progress Bar
+
+.p-progressbar {
+  background-color: $background-color !important;
+}
+
+.p-progressbar-value {
+  background-color: $primary-color !important;
+}
+
+.p-progressbar-label {
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+// PrimeReact InputText
+
+.p-inputtext {
+  background-color: $background-color;
+}
+
+// PrimeReact Dropdown
+
+.p-dropdown {
+  background-color: $background-color;
+}
+
+.p-dropdown-trigger {
+  background-color: $background-color;
+}
+
+.p-dropdown-items {
+  background-color: $background-color;
+}
+
+// PrimeReact Menu
+
+.p-menu {
+  background-color: $background-color;
+}
+
+// PrimeReact Button {
+
+.p-button-danger {
+  background-color: $primary-color;
+  color: #ffffff;
+  border-color: $primary-color;
+}
+
+.p-button-secondary {
+  background-color: $background-color;
+  color: #ffffff;
+  border-color: $background-color;
 }

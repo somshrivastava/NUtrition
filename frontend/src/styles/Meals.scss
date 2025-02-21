@@ -1,0 +1,65 @@
+@use "./variables" as *;
+
+.page {
+  &-meals {
+    &-title {
+      color: $primary-color;
+      padding-bottom: 0.75rem;
+    }
+
+    &-items {
+    }
+
+    &-item {
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid white;
+      }
+      &-title {
+        margin-bottom: 0.4rem;
+      }
+
+      &-serving-size {
+        margin-bottom: 0.6rem;
+      }
+
+      &-macros {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-calories,
+        &-carbohydrates,
+        &-protein,
+        &-fat {
+          color: #000000;
+          font-size: 0.85rem;
+          font-weight: bold;
+          padding: 0.3rem 0.5rem;
+          border-radius: 0.25rem;
+        }
+
+        &-calories {
+          background-color: #ffffff;
+          margin-right: 0.75rem;
+        }
+
+        &-carbohydrates {
+          background-color: $carbohydrates;
+          margin-right: 0.75rem;
+        }
+
+        &-protein {
+          background-color: $protein;
+          margin-right: 0.75rem;
+        }
+
+        &-fat {
+          background-color: $fat;
+        }
+      }
+    }
+  }
+}

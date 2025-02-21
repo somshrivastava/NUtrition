@@ -17,7 +17,7 @@ export enum FoodStation {
 export interface NutritionUser {
   uid: String;
   name: String;
-  lastLoggedIn: String;
+  lastLoggedIn?: String;
   pfp: String;
 }
 

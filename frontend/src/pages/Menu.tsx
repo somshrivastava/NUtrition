@@ -1,15 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./../styles/Menu.scss";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Foods, FoodStation } from "../schema.type";
 import Date from "../components/Date";
+import { InputNumber, InputNumberValueChangeEvent } from "primereact/inputnumber";
 
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
+  const [servingSize, setServingSize] = useState(null);
   const diningHalls = [{ name: "International Village" }, { name: "Stetson East" }];
   const foods: Foods = {
     breakfast: [
+      {
+        name: "English Breakfast Baked Beans",
+        description: "Traditional tomato baked beans with maple and spices",
+        foodStation: FoodStation.CUCINA,
+        nutritionalInfo: null,
+        servingSize: {
+          value: 1,
+          unit: "cup",
+        },
+        dietaryRestrictions: [
+          {
+            symbol: "AG",
+            name: "Avoiding Gluten",
+            description: "Menu items made without gluten containing ingredients",
+          },
+          {
+            symbol: "VG",
+            name: "Vegan",
+            description: "Contains no animal-based ingredients or by-products",
+          },
+        ],
+      },
       {
         name: "English Breakfast Baked Beans",
         description: "Traditional tomato baked beans with maple and spices",
@@ -98,6 +122,22 @@ const Menu: React.FC = () => {
                     <p className="page-menu-section-item-content-description">
                       {item.description}
                     </p>
+                  </div>
+                  <div className="page-menu-section-item-buttons">
+                    <InputNumber
+                      className="page-menu-section-item-serving-size"
+                      value={servingSize}
+                      onValueChange={(e: InputNumberValueChangeEvent) => setServingSize(e.value)}
+                      mode="decimal"
+                      showButtons
+                      min={0}
+                      max={100}
+                    />
+                    <Button
+                      className="page-menu-section-item-add-button"
+                      label="Add +"
+                      severity="success"
+                    />
                   </div>
                 </div>
               ))}
