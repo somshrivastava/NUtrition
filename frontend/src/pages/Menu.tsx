@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./../styles/Menu.scss";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
-import { Foods, FoodStation } from "../schema.type";
+import { DailyLog, Foods, FoodStation } from "../schema.type";
 import Date from "../components/Date";
 import { InputNumber, InputNumberValueChangeEvent } from "primereact/inputnumber";
+import { addDailyLog, getDailyLogs } from "../services/daily-log.service";
 
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
   const [servingSize, setServingSize] = useState(null);
   const diningHalls = [{ name: "International Village" }, { name: "Stetson East" }];
+  const [dailyLogs, setDailyLogs] = useState(null);
   const foods: Foods = {
     breakfast: [
       {
@@ -84,6 +86,20 @@ const Menu: React.FC = () => {
     everyday: [],
   };
 
+  useEffect(() => {
+    // addDailyLog({
+    //   uid: "asdf",
+    //   date: "asdfasdf",
+    //   calorieGoal: 2500,
+    //   foods: foods.breakfast,
+    // } as Omit<DailyLog, "docId">);
+  });
+
+  const getDailyLog = async () => {
+    const dailyLogs = await getDailyLogs(setDailyLogs);
+    console.log(dailyLogs);
+  };
+
   // TODO:
   // need to write a method that will take foods and rearrange the data
   // into an array of food stations with the foods associated with each food station
@@ -113,8 +129,8 @@ const Menu: React.FC = () => {
           <div className="page-menu-section">
             <h1 className="page-menu-section-title">Cucina</h1>
             <div className="page-menu-section-items">
-              {foods.breakfast.map((item) => (
-                <div className="page-menu-section-item">
+              {foods.breakfast.map((item, counter) => (
+                <div key={counter} className="page-menu-section-item">
                   <div className="page-menu-section-item-content">
                     <h3 className="page-menu-section-item-content-title">
                       English Breakfast Baked Beans (PR) (AG)

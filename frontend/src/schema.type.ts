@@ -75,6 +75,7 @@ export interface NutritionalInfo {
 }
 
 export interface DailyLog {
+  docId: String;
   uid: String;
   date: String;
   calorieGoal: Number;
