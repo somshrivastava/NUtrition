@@ -273,6 +273,16 @@ def scrape(dining_hall, day, month, meal, dining):
                     print("Error for ", food_name, e)
                     driver.quit()
                     serv_size = "Unknown"
+                    
+                try:
+                    food_description = WebDriverWait(item, 5).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "td"))
+                    ).find_element(By.CSS_SELECTOR, "div").find_element(By.CSS_SELECTOR, "span").text.split("\n")[2]
+                    print("Got the food description: ", food_description)
+                except Exception as e:
+                    print("Error for ", food_description, e)
+                    driver.quit()
+                    
                 
                 try: 
                     nutrition_button = WebDriverWait(item, 5).until(
@@ -313,7 +323,7 @@ def scrape(dining_hall, day, month, meal, dining):
                 food_object = {
                         "name": food_name,
                         "mealTime": meal,
-                        "description": "",  #TODO
+                        "description": food_description,  #TODO
                         "foodStation": cat_name,
                         "nutritionalInfo": item_nutri_info,
                         "servingSize": serv_size,  
@@ -348,13 +358,15 @@ def scrape(dining_hall, day, month, meal, dining):
             "diningHall": dining_map.get(dining),
             "foods": food_items
         }
+ 
+        print(menu_object)
             
-        response = (
-            supabase.table("menus")
-                .insert(menu_object)
-                .execute()
-        )
-        print(response)
+        # response = (
+        #     supabase.table("menus")
+        #         .insert(menu_object)
+        #         .execute()
+        # )
+        # print(response)
         
         # Writing to sample.json
         # with open(f"./test-data/{dining}_{str(meal).lower()}_{month}_{day}.json", "w") as outfile:
