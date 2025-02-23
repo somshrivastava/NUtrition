@@ -6,6 +6,7 @@ import { DailyLog, Food, Foods, FoodStation, Menu } from "../schema.type";
 import { InputNumber, InputNumberValueChangeEvent } from "primereact/inputnumber";
 import DatePicker from "../components/DatePicker";
 import { getDailyLogsRealtime, unsubscribeDailyLogsChannel } from "../services/daily-log.service";
+import { getMenus, unsubscribeMenusChannel } from "../services/menu.service";
 // import iv_breakfast_2_4 from "./../data/iv_Breakfast_2_4.json";
 // import iv_lunch_2_4 from "./../data/iv_Lunch_2_4.json";
 // import iv_dinner_2_4 from "./../data/iv_Dinner_2_4.json";
@@ -23,7 +24,7 @@ import { getDailyLogsRealtime, unsubscribeDailyLogsChannel } from "../services/d
 const Menu: React.FC = () => {
   const [selectedDiningHall, setSelectedDiningHall] = useState(null);
   const [servingSize, setServingSize] = useState(null);
-  const [dailyLogs, setDailyLogs] = useState(null);
+  const [menus, setMenus] = useState(null);
   const diningHalls = [{ name: "International Village" }, { name: "Stetson East" }];
 
   useEffect(() => {
@@ -47,9 +48,10 @@ const Menu: React.FC = () => {
     //   diningHall: "Stetson East",
     //   foods: [...steast_breakfast_2_4, ...steast_lunch_2_4, ...steast_dinner_2_4],
     // } as Omit<Menu, "docId">);
-    getDailyLogsRealtime(setDailyLogs);
+    getMenus(setMenus);
+    console.log(menus);
     return () => {
-      unsubscribeDailyLogsChannel();
+      unsubscribeMenusChannel();
     };
   }, []);
   // TODO:
@@ -81,34 +83,36 @@ const Menu: React.FC = () => {
           <div className="page-menu-section">
             <h1 className="page-menu-section-title">Cucina</h1>
             <div className="page-menu-section-items">
-              {/* {foods.breakfast.map((item) => (
-                <div key={item.docId as React.Key} className="page-menu-section-item">
-                  <div className="page-menu-section-item-content">
-                    <h3 className="page-menu-section-item-content-title">
-                      English Breakfast Baked Beans (PR) (AG)
-                    </h3>
-                    <p className="page-menu-section-item-content-description">
-                      Traditional tomato baked beans with maple and spices{" "}
-                    </p>
-                  </div>
-                  <div className="page-menu-section-item-buttons">
-                    <InputNumber
-                      className="page-menu-section-item-serving-size"
-                      value={servingSize}
-                      onValueChange={(e: InputNumberValueChangeEvent) => setServingSize(e.value)}
-                      mode="decimal"
-                      showButtons
-                      min={0}
-                      max={100}
-                    />
-                    <Button
-                      className="page-menu-section-item-add-button"
-                      label="Add +"
-                      severity="success"
-                    />
-                  </div>
-                </div>
-              ))} */}
+              {menus != undefined && menus.length > 0
+                ? menus[0].foods.map((item) => (
+                    <div key={item.docId as React.Key} className="page-menu-section-item">
+                      <div className="page-menu-section-item-content">
+                        <h3 className="page-menu-section-item-content-title">{item.name}</h3>
+                        <p className="page-menu-section-item-content-description">
+                          {item.description}
+                        </p>
+                      </div>
+                      <div className="page-menu-section-item-buttons">
+                        <InputNumber
+                          className="page-menu-section-item-serving-size"
+                          value={servingSize}
+                          onValueChange={(e: InputNumberValueChangeEvent) =>
+                            setServingSize(e.value)
+                          }
+                          mode="decimal"
+                          showButtons
+                          min={0}
+                          max={100}
+                        />
+                        <Button
+                          className="page-menu-section-item-add-button"
+                          label="Add +"
+                          severity="success"
+                        />
+                      </div>
+                    </div>
+                  ))
+                : ""}
             </div>
           </div>
         </div>

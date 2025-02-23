@@ -331,12 +331,16 @@ def scrape(dining_hall, day, month, meal, dining):
             "iv": "International Village"
         }
         
-        # Get current date and time
-        now = datetime.now()
+        # Specify the year, month, and day
+        year = 2025
+        month = month
+        day = day
 
-        # Format date and time
-        formatted_date = now.strftime("%-m/%-d/%Y, %-I:%M:%S %p")  # Unix-based systems (Linux, macOS)
-        # formatted_date = now.strftime("%#m/%#d/%Y, %#I:%M:%S %p")  # Windows
+        # Create a datetime object with midnight as the time
+        dt = datetime(year, month, day, 0, 0, 0)
+
+        # Format the date as required
+        formatted_date = dt.strftime("%-m/%-d/%Y, %-I:%M:%S %p")  # Works on Unix-based systems
         
         menu_object = {
             "docId": str(uuid.uuid4()),
@@ -382,7 +386,12 @@ def main():
     
     
     print(datetime.now())
-    print(scrape(dining_halls.get("steast"), 23, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))
     # print(scrape(dining_halls.get("steast"), 23, 2, "Lunch", "steast"))
     # print(scrape(dining_halls.get("steast"), 23, 2, "Dinner", "steast"))
     # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))

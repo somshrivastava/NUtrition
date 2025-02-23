@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "primereact/button";
 import "./../styles/History.scss";
 import Legend from "./../components/Legend";
-import Meals from "./../components/Meals";
 import { Dropdown } from "primereact/dropdown";
 import {
   LineChart,
