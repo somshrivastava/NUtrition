@@ -24,7 +24,7 @@ const MealLog: React.FC = () => {
         </div>
         <MacrosChart carbohydrates={33} protein={33} fat={33} />
         <Legend />
-        <Meals title="Logged Meals" meals={data} />
+        {/* <Meals title="Logged Meals" meals={data} /> */}
       </div>
     </>
   );

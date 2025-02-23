@@ -120,7 +120,7 @@ const History: React.FC = () => {
             <Button className="page-macros-fat" label="29g" />
           </div>
         </div>
-        <Meals />
+        {/* <Meals /> */}
       </div>
     </>
   );
