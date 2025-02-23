@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./../styles/Date.scss";
 import LeftArrowSvg from "./../assets/left-arrow.svg";
 import RightArrowSvg from "./../assets/right-arrow.svg";
-import usePersistState from "../hooks/usePersistState";
 import { printDate } from "../util";
 
 const DatePicker: React.FC = () => {
@@ -10,25 +9,29 @@ const DatePicker: React.FC = () => {
 
   useEffect(() => {
     if (getDate() == undefined) {
-      localStorage.setItem("date", JSON.stringify(new Date()));
+      sessionStorage.setItem("date", JSON.stringify(new Date()));
     }
-    setDate(getDate());
+    setDate(getDateObject(getDate()));
   }, []);
 
+  const getDateObject = (str: Date) => {
+    return new Date(str);
+  };
+
   const getDate = () => {
-    return new Date(JSON.parse(localStorage.getItem("date")));
+    return JSON.parse(sessionStorage.getItem("date"));
   };
 
   const decrementDate = () => {
     date.setDate(date.getDate() - 1);
-    localStorage.setItem("date", JSON.stringify(date));
-    setDate(getDate());
+    sessionStorage.setItem("date", JSON.stringify(date));
+    setDate(getDateObject(getDate()));
   };
 
   const incrementDate = () => {
     date.setDate(date.getDate() + 1);
-    localStorage.setItem("date", JSON.stringify(date));
-    setDate(getDate());
+    sessionStorage.setItem("date", JSON.stringify(date));
+    setDate(getDateObject(getDate()));
   };
 
   return (

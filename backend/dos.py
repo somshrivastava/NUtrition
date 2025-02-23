@@ -65,37 +65,37 @@ def parse_nutritional_info(text):
                 
                 
             if "Calories" in key and "Calories From Fat" not in key: 
-                nutritional_data["calories"] = value
+                nutritional_data["calories"] = str(value)
             elif "Protein" in key: 
-                nutritional_data["protein"] = value
+                nutritional_data["protein"] = str(value)
             elif "Carbohydrates" in key or "Total Carbohydrates" in key:
-                nutritional_data["carbohydrates"] = value
+                nutritional_data["carbohydrates"] = str(value)
             elif "Total Fat" in key:
-                nutritional_data["fat"] = value
+                nutritional_data["fat"] = str(value)
             elif "Saturated Fat" in key:
-                nutritional_data["saturatedFat"] = value
+                nutritional_data["saturatedFat"] = str(value)
             elif "Cholesterol" in key:
-                nutritional_data["cholesterol"] = value
+                nutritional_data["cholesterol"] = str(value)
             elif "Dietary Fiber" in key:
-                nutritional_data["dietaryFiber"] = value
+                nutritional_data["dietaryFiber"] = str(value)
             elif "Sodium" in key:
-                nutritional_data["sodium"] = value
+                nutritional_data["sodium"] = str(value)
             elif "Potassium" in key:
-                nutritional_data["potassium"] = value
+                nutritional_data["potassium"] = str(value)
             elif "Calcium" in key:
-                nutritional_data["calcium"] = value
+                nutritional_data["calcium"] = str(value)
             elif "Iron" in key:
-                nutritional_data["iron"] = value
+                nutritional_data["iron"] = str(value)
             elif "Trans Fat" in key:
-                nutritional_data["transFat"] = value
+                nutritional_data["transFat"] = str(value)
             elif "Vitamin D" in key:
-                nutritional_data["vitaminD"] = value
+                nutritional_data["vitaminD"] = str(value)
             elif "Vitamin C" in key:
-                nutritional_data["vitaminC"] = value
+                nutritional_data["vitaminC"] = str(value)
             elif "Vitamin A" in key:
-                nutritional_data["vitaminA"] = value
+                nutritional_data["vitaminA"] = str(value)
             elif "Ingredients" in key:
-                nutritional_data["ingredients"] = value
+                nutritional_data["ingredients"] = str(value)
                 
     return nutritional_data
                 
@@ -108,7 +108,7 @@ def parse_nutritional_info(text):
 
 
 
-def scrape(dining_hall, day, month, meal): 
+def scrape(dining_hall, day, month, meal, dining): 
     '''diningHall: string
         day: int (1-31)
         month: enum int (1-12) inclusive
@@ -124,7 +124,7 @@ def scrape(dining_hall, day, month, meal):
     driver.get("https://www.nudining.com/public/whats-on-the-menu")
     
     try: 
-        wait = WebDriverWait(driver, 15)
+        wait = WebDriverWait(driver, 20)
         # creating a WebDriverWait wait object that waits up to 
         
         
@@ -306,6 +306,7 @@ def scrape(dining_hall, day, month, meal):
                 
                 food_object = {
                         "name": food_name,
+                        "mealTime": meal,
                         "description": "",  #TODO
                         "foodStation": cat_name,
                         "nutritionalInfo": item_nutri_info,
@@ -323,7 +324,7 @@ def scrape(dining_hall, day, month, meal):
         json_object = json.dumps(food_items, indent=4)
         
         # Writing to sample.json
-        with open(f"./real-data/{dining_hall}_{meal}_{month}_{day}_{datetime.now()}.json", "w") as outfile:
+        with open(f"./real-data/{dining}_{meal}_{month}_{day}.json", "w") as outfile:
             outfile.write(json_object)
         return food_items
                 
@@ -352,7 +353,21 @@ def main():
     
     
     print(datetime.now())
-    print(scrape(dining_halls.get("stwest"), 4, 2, "Lunch"))
+    # print(scrape(dining_halls.get("steast"), 4, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 5, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 4, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("steast"), 4, 2, "Dinner", "steast"))
+    # print(scrape(dining_halls.get("steast"), 5, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("steast"), 5, 2, "Dinner", "steast"))
+    # print(scrape(dining_halls.get("steast"), 6, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 6, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("steast"), 6, 2, "Dinner", "steast"))
+    # print(scrape(dining_halls.get("iv"), 4, 2, "Breakfast", "iv"))
+    print(scrape(dining_halls.get("iv"), 4, 2, "Lunch", "iv"))
+    # print(scrape(dining_halls.get("iv"), 4, 2, "Dinner", "iv"))
+
+
+
     
     
     

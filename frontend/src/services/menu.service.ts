@@ -1,6 +1,7 @@
 import { Menu } from "../schema.type";
 import supabase from "../supabase";
 import { timestamp } from "../util";
+import { v4 as uuidv4 } from "uuid";
 
 // Read all menus
 export const getMenus = async (callback: (menus: Menu[]) => void) => {
@@ -33,7 +34,10 @@ export const unsubscribeMenusChannel = () => {
 
 // Create a new menu
 export const addMenu = async (menu: Omit<Menu, "docId">): Promise<String> => {
-  const { data, error } = await supabase.from("menus").insert([menu]).select();
+  const { data, error } = await supabase
+    .from("menus")
+    .insert([{ docId: uuidv4(), ...menu }])
+    .select();
   if (data) {
     console.log(timestamp(), "| Added menu:", menu);
     return data[0].docId;
