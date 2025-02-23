@@ -30,7 +30,7 @@ export interface Menu {
 }
 
 export interface Quantity {
-  value: number;
+  value: number | string;
   unit: String;
 }
 
@@ -48,7 +48,7 @@ export interface Food {
   foodStation: FoodStation;
   mealTime: String;
   nutritionalInfo: NutritionalInfo;
-  servingSize: String;
+  servingSize: Quantity;
   dietaryRestrictions: DietaryRestriction[];
 }
 
@@ -59,21 +59,21 @@ export interface DietaryRestriction {
 }
 
 export interface NutritionalInfo {
-  calories: String;
-  protein: String;
-  carbohydrates: String;
-  fat: String;
-  saturatedFat: String;
-  cholestrol?: String;
-  dietaryFiber: String;
-  sodium: String;
-  potassium: String;
-  calcium: String;
-  iron: String;
-  transFat: String;
-  vitaminD: String;
-  vitaminC: String;
-  vitaminA: String;
+  calories: Quantity;
+  protein: Quantity;
+  carbohydrates: Quantity;
+  fat: Quantity;
+  saturatedFat: Quantity;
+  cholestrol?: Quantity;
+  dietaryFiber: Quantity;
+  sodium: Quantity;
+  potassium: Quantity;
+  calcium: Quantity;
+  iron: Quantity;
+  transFat: Quantity;
+  vitaminD: Quantity;
+  vitaminC: Quantity;
+  vitaminA: Quantity;
   ingredients: String;
 }
 

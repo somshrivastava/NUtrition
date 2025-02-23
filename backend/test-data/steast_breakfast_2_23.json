@@ -1,0 +1,4516 @@
+[
+    {
+        "name": "English Breakfast Baked Beans",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 180,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 8,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 29,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 4,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 6,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 380,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 560,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 6,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 5,
+                "unit": "re"
+            },
+            "ingredients": "Cannellini Beans (White Kidney Beans, Water, Salt, Calcium Chloride, Disodium Edta), Tomato puree (tomato puree, water, tomato paste, citric acid), Onions, Maple Syrup, Tomato paste (tomato paste, salt, citric acid), Canola Oil, Worcestershire Sauce with Anchovies, Garlic, Salt, Paprika (Paprika and Silicon Dioxide), Black Pepper, Thyme"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Quinoa",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 130,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 22,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 3,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 340,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 170,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.5",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Quinoa, Water, Chicken Broth Concentrate"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Meatless Vegetarian Sausage Patty",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 70,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 9,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 250,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Meatless Sausage"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Blistered Grape Tomatoes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 4,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Tomatoes, Canola Oil, Salt, Fresh Ground Black Pepper, Parsley, Thyme"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Ham, Egg, Cheese Breakfast Pizza",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 330,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 18,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 36,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 12,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 85,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 810,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 280,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 240,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 130,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Pizza Dough, Part Skim Mozzarella Cheese, Ham, Liquid Egg, Whole Milk, Bacon, Sharp Cheddar Cheese, Green Bell Peppers, Mushrooms, Onions, American Cheese, Butter, Canola Oil, All Purpose Flour, Salt, White Pepper"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "slice"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cheese Pizza",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "CUCINA",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 200,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 10,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 18,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 640,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 140,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 230,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 15,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 3,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Pizza Dough, Parmesan Cheese, Part Skim Mozzarella Cheese, Crushed tomatoes (unpeeled tomatoes, tomato puree, salt, citric acid), Chopped whole peeled tomatoes (tomatoes, tomato juice, salt, calcium chloride, citric acid), Canola Oil, Salt, Basil, Garlic, Black Pepper"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "slice"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "White Rice",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "RICE STATION",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 120,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 23,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 50,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.9",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Long Grain White Rice, Canola Oil, Salt"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Brown Rice",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "RICE STATION",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 23,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 1,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Brown Rice"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Olive Oil",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "RICE STATION",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 240,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 27,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Olive Oil"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "floz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Gluten Free Soy Sauce",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "RICE STATION",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 20,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 880,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 200,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Soy Sauce"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "floz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Seasoned Rice Vinegar",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "RICE STATION",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 0,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Seasoned Rice Vinegar"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "floz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Scrambled Eggs",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "HOMESTYLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 200,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 14,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 15,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 420,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 160,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 160,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 90,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg, Canola Oil"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Bacon",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "HOMESTYLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 130,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 9,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 470,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 140,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 5,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Bacon"
+        },
+        "servingSize": {
+            "value": "3",
+            "unit": "slice"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Fried Hash Brown Patty",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "HOMESTYLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 150,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 12,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 11,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 280,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 180,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Hash Brown Patties"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Buttermilk Pancakes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "HOMESTYLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 170,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 33,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 520,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Pancake Mix, Cooking Spray^"
+        },
+        "servingSize": {
+            "value": "2",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Eggs Your Way",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 60,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 6,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 4,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 165,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 35,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Egg"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Eggs",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 8,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 6,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 225,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 85,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 50,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Egg Whites",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 7,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg White"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Bacon",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 130,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 10,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 480,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 140,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 5,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Bacon"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Italian Sausage Crumbles",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 7,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 230,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 10,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Italian Sausage"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Ham",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 35,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 1,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 15,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 360,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 200,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 170,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Ham"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Shredded Sharp American Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 100,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 9,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 470,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 300,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 90,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "American Cheese"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Baby Spinach",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 0,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Spinach"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Sliced Mushrooms",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Mushrooms"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Tomatoes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 4,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Tomatoes"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Chopped Green Bell Pepper",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 50,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 23,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Green Bell Peppers"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Onions",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "MENUTAINMENT",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 10,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 3,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Onions"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Oatmeal",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 16,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 2,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 95,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Oatmeal, Salt"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ladle-4oz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Hard Boiled Eggs",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 130,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 11,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 8,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 325,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 125,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 120,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 50,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.5",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 70,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Waters, Egg"
+        },
+        "servingSize": {
+            "value": "2",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cinnamon Sugar",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 28,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Sugar, Brown Sugar (sugar, cane syrups), Cinnamon"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Brown Sugar Topping",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 800,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 208,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 150,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Brown Sugar (sugar, cane syrups), Sugar"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Grapefruit",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 35,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 9,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 26,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Ruby Red Grapefruit"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "half"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Watermelon",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 22,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 330,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.7",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 24,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Watermelon"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "wedge"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Red Seedless Grapes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 25,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 7,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Grapes"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cubed Pineapple",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 20,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 5,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Pineapple"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cubed Cantaloupe",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 15,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 3,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 15,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cantaloupe"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cubed Honeydew",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 15,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 8,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Honeydew Melon"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Fat Free Cottage Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 25,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 135,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 50,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Fat Free Cottage Cheese"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Low Fat Plain Yogurt",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 120,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 25,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Low Fat Yogurt"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Low-Fat Blueberry Yogurt",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 35,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 7,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 30,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Low Fat Blueberry Yogurt"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Blueberries",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 15,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 3,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Blueberries"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Oats 'n Honey Granola",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 130,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 20,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "4.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Granola"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cream Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 100,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cream Cheese"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Maple Honey Cream Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 100,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 3,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 9,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cream Cheese, Honey, Maple Extract"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Strawberry Cream Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 100,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 8,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 75,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cream Cheese, Strawberry Preserves"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Butter PC",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 70,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 8,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Butter"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Margarine, Smart Balance, 5g",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 3,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 35,
+                "unit": "re"
+            },
+            "ingredients": "INGREDIENTS"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Jelly, Assorted (Grape, Strawberry, Mixed Fruit), Smuckers",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 35,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 9,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": "-",
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Concord Grape Jelly"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Peanut Butter, .75 oz, Jif",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 120,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 5,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 120,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "INGREDIENTS"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Nutella",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 13,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 6,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Chocolate Hazelnut Spread"
+        },
+        "servingSize": {
+            "value": "3/4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Dried Cranberries",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 8,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cranberries"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "tbsp"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Raisins",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 25,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 7,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Raisins"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "tbsp"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Roasted Sunflower Seeds",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FRESH 52 B",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 45,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 4,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Sunflower Seeds"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "tbsp"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Plain Bagel",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 300,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 9,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 60,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 2,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 300,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "3.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Plain Bagel"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cinnamon Raisin Bagel",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 330,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 11,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 66,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 2,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 3,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 460,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 150,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "3.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cinnamon Raisin Bagel"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Everything Bagel",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 310,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 11,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 61,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 3,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 570,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 120,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 4,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 20,
+                "unit": "re"
+            },
+            "ingredients": "Everything Bagel"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Mini Croissant",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 11,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "4.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Croissant"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Blueberry Muffin",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 360,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 63,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 530,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Muffin Mix, Water, Blueberries, All Purpose Flour"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Assorted Mini Danishes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 16,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 135,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Demi Danish"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Chocolate and Sprinkles Donut",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 410,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 60,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 17,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 260,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.9",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 15,
+                "unit": "re"
+            },
+            "ingredients": "Homestyle Doughnut, Chocolate Icing, Chocolate Sprinkles"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Blueberry Scone",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEET SHOPPE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 390,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 53,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 17,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 360,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 150,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Blueberry Scone"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    }
+]

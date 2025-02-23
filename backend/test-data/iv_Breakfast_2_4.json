@@ -1,0 +1,2444 @@
+[
+    {
+        "name": "Mini Croissant",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 1,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 11,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "4.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Croissant"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Blueberry Muffin",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 360,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 63,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 530,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Muffin Mix, Water, Blueberries, All Purpose Flour"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Assorted Mini Danishes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 16,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 135,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Demi Danish"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cranberry Orange Scone",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 360,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 50,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 16,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 10,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 340,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 150,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.9",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cranberry Orange Scone Dough"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cinnamon and Sugar Donut",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 190,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 28,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 8,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 5,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 240,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": "-",
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cinnamon Sugar Donut"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cinnamon Twist",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SWEETS AT THE TABLE",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 60,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 12,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": "less than 5 milligrams",
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 1,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.5",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Bread Flour, Sugar, Cinnamon, Water, Brown Sugar (sugar, cane syrups), Butter, Canola Oil, Salt, Active Yeast"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Oatmeal",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 80,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 14,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Oatmeal, Salt"
+        },
+        "servingSize": {
+            "value": "4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "White Rice",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 140,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 31,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 75,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Long Grain White Rice, Water, Vegetable Broth Concentrate"
+        },
+        "servingSize": {
+            "value": "4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Hard Boiled Egg",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 70,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 6,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "4.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 165,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 55,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.5",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 40,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Egg"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Pancake and Waffle Syrup",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "SOUP",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 280,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 72,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 95,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Pancake & Waffle Syrup"
+        },
+        "servingSize": {
+            "value": "3",
+            "unit": "ladle-1oz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Eggs",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 80,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 7,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 210,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 45,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg"
+        },
+        "servingSize": {
+            "value": "2",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Eggs Your Way",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 60,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 6,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 4,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 165,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 35,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Egg"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Egg Whites",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 30,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 6,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 95,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg White"
+        },
+        "servingSize": {
+            "value": "2",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Chopped Green Bell Pepper",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 50,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 23,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Green Bell Peppers"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Onions",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 10,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 3,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 40,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 2,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Onions"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Tomatoes",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 1,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 4,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Tomatoes"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Sliced Mushrooms",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 5,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 1,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Mushrooms"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Baby Spinach",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 25,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 630,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "3.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 32,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Spinach"
+        },
+        "servingSize": {
+            "value": "4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Sliced Tofu",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 20,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.5",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Tofu"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Shredded Cheddar Cheese",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 110,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 6,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 9,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 190,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 200,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 5,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Cheddar Cheese"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Bacon",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 530,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 38,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 40,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 15,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 110,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 1910,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 570,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.1",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 20,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Bacon"
+        },
+        "servingSize": {
+            "value": "4",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Diced Ham",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 35,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 2,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 1,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 15,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 360,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 200,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.2",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 170,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Ham"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Pork Sausage Patty",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "ASIAN KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 80,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 4,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 0,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 7,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 170,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": "-",
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Pork Sausage"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ounce"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Scrambled Egg",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "UNITED KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 170,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 14,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 12,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 405,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 610,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 150,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 60,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.9",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 90,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 15,
+                "unit": "re"
+            },
+            "ingredients": "Liquid Egg, Margarine, Salt, Black Pepper"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Fried Hash Brown Patty",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "UNITED KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 150,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 12,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 11,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 280,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 180,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Hash Brown Patties"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Pork Sausage Link",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "UNITED KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 200,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 5,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "fat": {
+                "value": 20,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 5,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 20,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 260,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 25,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 10,
+                "unit": "re"
+            },
+            "ingredients": "Pork Sausage"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Cinnamon French Toast",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "UNITED KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 210,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 12,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 35,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 2,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 420,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 230,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 160,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.8",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 40,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 60,
+                "unit": "re"
+            },
+            "ingredients": "Texas Toast, Fat Free Milk, Egg Substitute, Vanilla Extract, Cinnamon, Cooking Spray^"
+        },
+        "servingSize": {
+            "value": "3",
+            "unit": "half"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Pancake and Waffle Syrup",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "UNITED KITCHEN",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 90,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 0,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 24,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 0,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 30,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Pancake & Waffle Syrup"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "ladle-1oz"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Tofu Scramble",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FUSION GRILL",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 100,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 8,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 6,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 3,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 200,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 130,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.3",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 7,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Tofu, Tomatoes, Onions, Swiss Chard, Harissa Paste, Canola Oil"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Tri-Color Quinoa Blend",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FUSION GRILL",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 50,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 2,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 10,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 80,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 10,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "0.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Water, Tri-Color Quinoa, Vegetable Base, Salt"
+        },
+        "servingSize": {
+            "value": "1/4",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "English Breakfast Baked Beans",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FUSION GRILL",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 180,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 8,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 29,
+                "unit": "g"
+            },
+            "fat": {
+                "value": 4,
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 6,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 380,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 560,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 70,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": "-",
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 6,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 5,
+                "unit": "re"
+            },
+            "ingredients": "Cannellini Beans (White Kidney Beans, Water, Salt, Calcium Chloride, Disodium Edta), Tomato puree (tomato puree, water, tomato paste, citric acid), Onions, Maple Syrup, Tomato paste (tomato paste, salt, citric acid), Canola Oil, Worcestershire Sauce with Anchovies, Garlic, Salt, Paprika (Paprika and Silicon Dioxide), Black Pepper, Thyme"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Sauteed Spinach",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FUSION GRILL",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 50,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 3,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "3.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": 2,
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 230,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 500,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 90,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "2.4",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 25,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": "-",
+                "unit": "re"
+            },
+            "ingredients": "Spinach, Onions, Canola Oil, Salt, Black Pepper"
+        },
+        "servingSize": {
+            "value": "1/2",
+            "unit": "cup"
+        },
+        "dietaryRestrictions": []
+    },
+    {
+        "name": "Meatless Vegetarian Sausage Patty",
+        "mealTime": "Breakfast",
+        "description": "",
+        "foodStation": "FUSION GRILL",
+        "nutritionalInfo": {
+            "calories": {
+                "value": 70,
+                "unit": "cals"
+            },
+            "protein": {
+                "value": 9,
+                "unit": "g"
+            },
+            "carbohydrates": {
+                "value": 4,
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.5",
+                "unit": "g"
+            },
+            "saturatedFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "cholesterol": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "dietaryFiber": {
+                "value": "less than 1 gram",
+                "unit": "g"
+            },
+            "sodium": {
+                "value": 250,
+                "unit": "mg"
+            },
+            "potassium": {
+                "value": 100,
+                "unit": "mg"
+            },
+            "calcium": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "iron": {
+                "value": "1.6",
+                "unit": "mg"
+            },
+            "transFat": {
+                "value": 0,
+                "unit": "g"
+            },
+            "vitaminD": {
+                "value": 0,
+                "unit": "iu"
+            },
+            "vitaminC": {
+                "value": 0,
+                "unit": "mg"
+            },
+            "vitaminA": {
+                "value": 0,
+                "unit": "re"
+            },
+            "ingredients": "Meatless Sausage"
+        },
+        "servingSize": {
+            "value": "1",
+            "unit": "each"
+        },
+        "dietaryRestrictions": []
+    }
+]
