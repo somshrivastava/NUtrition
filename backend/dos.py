@@ -8,7 +8,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import StaleElementReferenceException
 import json
 from selenium.webdriver.firefox.options import Options
-
+from datetime import datetime
+import uuid
+from config import supabase
 
 import json 
 
@@ -65,35 +67,35 @@ def parse_nutritional_info(text):
                 
                 
             if "Calories" in key and "Calories From Fat" not in key: 
-                nutritional_data["calories"] = str(value)
+                nutritional_data["calories"] = { "value": value, "unit": "cals" } 
             elif "Protein" in key: 
-                nutritional_data["protein"] = str(value)
+                nutritional_data["protein"] = {"value": value, "unit": "g"}
             elif "Carbohydrates" in key or "Total Carbohydrates" in key:
-                nutritional_data["carbohydrates"] = str(value)
+                nutritional_data["carbohydrates"] = {"value": value, "unit": "g"}
             elif "Total Fat" in key:
-                nutritional_data["fat"] = str(value)
+                nutritional_data["fat"] = {"value": value, "unit": "g"} 
             elif "Saturated Fat" in key:
-                nutritional_data["saturatedFat"] = str(value)
+                nutritional_data["saturatedFat"] = {"value": value, "unit": "g"}
             elif "Cholesterol" in key:
-                nutritional_data["cholesterol"] = str(value)
+                nutritional_data["cholesterol"] = {"value": value, "unit": "mg"}
             elif "Dietary Fiber" in key:
-                nutritional_data["dietaryFiber"] = str(value)
+                nutritional_data["dietaryFiber"] = {"value": value, "unit": "g"}
             elif "Sodium" in key:
-                nutritional_data["sodium"] = str(value)
+                nutritional_data["sodium"] = {"value": value, "unit": "mg"}
             elif "Potassium" in key:
-                nutritional_data["potassium"] = str(value)
+                nutritional_data["potassium"] = {"value": value, "unit": "mg"}
             elif "Calcium" in key:
-                nutritional_data["calcium"] = str(value)
+                nutritional_data["calcium"] = {"value": value, "unit": "mg"}
             elif "Iron" in key:
-                nutritional_data["iron"] = str(value)
+                nutritional_data["iron"] = {"value": value, "unit": "mg"}
             elif "Trans Fat" in key:
-                nutritional_data["transFat"] = str(value)
+                nutritional_data["transFat"] = {"value": value, "unit": "g"}
             elif "Vitamin D" in key:
-                nutritional_data["vitaminD"] = str(value)
+                nutritional_data["vitaminD"] = {"value": value, "unit": "iu"}
             elif "Vitamin C" in key:
-                nutritional_data["vitaminC"] = str(value)
+                nutritional_data["vitaminC"] = {"value": value, "unit": "mg"}
             elif "Vitamin A" in key:
-                nutritional_data["vitaminA"] = str(value)
+                nutritional_data["vitaminA"] = {"value": value, "unit": "re"}
             elif "Ingredients" in key:
                 nutritional_data["ingredients"] = str(value)
                 
@@ -259,14 +261,28 @@ def scrape(dining_hall, day, month, meal, dining):
                     driver.quit()
                 
                 try:
-                    serv_size = WebDriverWait(item, 5).until(
+                    serv_size_text = WebDriverWait(item, 5).until(
                         EC.presence_of_element_located((By.XPATH, "./td[last()]"))
                     ).text.strip()
+                    serv_size = {
+                        "value": serv_size_text.split(" ")[0],
+                        "unit": serv_size_text.split(" ")[1]
+                    }
                     print("Got the serving size: ", serv_size)
                 except Exception as e:
                     print("Error for ", food_name, e)
                     driver.quit()
                     serv_size = "Unknown"
+                    
+                try:
+                    food_description = WebDriverWait(item, 5).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "td"))
+                    ).find_element(By.CSS_SELECTOR, "div").find_element(By.CSS_SELECTOR, "span").text.split("\n")[2]
+                    print("Got the food description: ", food_description)
+                except Exception as e:
+                    print("Error for ", food_description, e)
+                    driver.quit()
+                    
                 
                 try: 
                     nutrition_button = WebDriverWait(item, 5).until(
@@ -307,7 +323,7 @@ def scrape(dining_hall, day, month, meal, dining):
                 food_object = {
                         "name": food_name,
                         "mealTime": meal,
-                        "description": "",  #TODO
+                        "description": food_description,  #TODO
                         "foodStation": cat_name,
                         "nutritionalInfo": item_nutri_info,
                         "servingSize": serv_size,  
@@ -320,13 +336,42 @@ def scrape(dining_hall, day, month, meal, dining):
                 print("Final food object for ", food_name, food_object)
                 food_items.append(food_object)
                 
-        # Serializing json
-        json_object = json.dumps(food_items, indent=4)
+        dining_map = {
+            "steast": "Stetson East",
+            "iv": "International Village"
+        }
+        
+        # Specify the year, month, and day
+        year = 2025
+        month = month
+        day = day
+
+        # Create a datetime object with midnight as the time
+        dt = datetime(year, month, day, 0, 0, 0)
+
+        # Format the date as required
+        formatted_date = dt.strftime("%-m/%-d/%Y, %-I:%M:%S %p")  # Works on Unix-based systems
+        
+        menu_object = {
+            "docId": str(uuid.uuid4()),
+            "date": formatted_date,
+            "diningHall": dining_map.get(dining),
+            "foods": food_items
+        }
+ 
+        print(menu_object)
+            
+        # response = (
+        #     supabase.table("menus")
+        #         .insert(menu_object)
+        #         .execute()
+        # )
+        # print(response)
         
         # Writing to sample.json
-        with open(f"./real-data/{dining}_{meal}_{month}_{day}.json", "w") as outfile:
-            outfile.write(json_object)
-        return food_items
+        # with open(f"./test-data/{dining}_{str(meal).lower()}_{month}_{day}.json", "w") as outfile:
+        #     outfile.write(json_object)
+        return {}
                 
         
         
@@ -353,24 +398,17 @@ def main():
     
     
     print(datetime.now())
-    # print(scrape(dining_halls.get("steast"), 4, 2, "Breakfast", "steast"))
-    # print(scrape(dining_halls.get("steast"), 5, 2, "Breakfast", "steast"))
-    # print(scrape(dining_halls.get("steast"), 4, 2, "Lunch", "steast"))
-    # print(scrape(dining_halls.get("steast"), 4, 2, "Dinner", "steast"))
-    # print(scrape(dining_halls.get("steast"), 5, 2, "Lunch", "steast"))
-    # print(scrape(dining_halls.get("steast"), 5, 2, "Dinner", "steast"))
-    # print(scrape(dining_halls.get("steast"), 6, 2, "Breakfast", "steast"))
-    # print(scrape(dining_halls.get("steast"), 6, 2, "Lunch", "steast"))
-    # print(scrape(dining_halls.get("steast"), 6, 2, "Dinner", "steast"))
-    # print(scrape(dining_halls.get("iv"), 4, 2, "Breakfast", "iv"))
-    print(scrape(dining_halls.get("iv"), 4, 2, "Lunch", "iv"))
-    # print(scrape(dining_halls.get("iv"), 4, 2, "Dinner", "iv"))
-
-
-
-    
-    
-    
+    # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("steast"), 23, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("steast"), 23, 2, "Dinner", "steast"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Lunch", "iv"))
+    # print(scrape(dining_halls.get("iv"), 23, 2, "Dinner", "iv"))    
 
 if __name__ == "__main__":
     main()
