@@ -358,15 +358,13 @@ def scrape(dining_hall, day, month, meal, dining):
             "diningHall": dining_map.get(dining),
             "foods": food_items
         }
- 
-        print(menu_object)
-            
-        # response = (
-        #     supabase.table("menus")
-        #         .insert(menu_object)
-        #         .execute()
-        # )
-        # print(response)
+             
+        response = (
+            supabase.table("menus")
+                .insert(menu_object)
+                .execute()
+        )
+        print(response)
         
         # Writing to sample.json
         # with open(f"./test-data/{dining}_{str(meal).lower()}_{month}_{day}.json", "w") as outfile:
@@ -398,17 +396,24 @@ def main():
     
     
     print(datetime.now())
-    # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 21, 2, "Breakfast", "steast"))
     # print(scrape(dining_halls.get("iv"), 21, 2, "Breakfast", "iv"))
-    # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 22, 2, "Breakfast", "steast"))
     # print(scrape(dining_halls.get("iv"), 22, 2, "Breakfast", "iv"))
-    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "steast"))
+    # print(scrape(dining_halls.get("steast"), 23, 2, "Breakfast", "steast"))
     # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))
+    # print(scrape(dining_halls.get("steast"), 21, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("iv"), 21, 2, "Lunch", "iv"))
+    # print(scrape(dining_halls.get("steast"), 22, 2, "Lunch", "steast"))
+    # print(scrape(dining_halls.get("iv"), 22, 2, "Lunch", "iv"))
     # print(scrape(dining_halls.get("steast"), 23, 2, "Lunch", "steast"))
-    # print(scrape(dining_halls.get("steast"), 23, 2, "Dinner", "steast"))
-    # print(scrape(dining_halls.get("iv"), 23, 2, "Breakfast", "iv"))
     # print(scrape(dining_halls.get("iv"), 23, 2, "Lunch", "iv"))
-    # print(scrape(dining_halls.get("iv"), 23, 2, "Dinner", "iv"))    
+    print(scrape(dining_halls.get("steast"), 21, 2, "Dinner", "steast"))
+    print(scrape(dining_halls.get("iv"), 21, 2, "Dinner", "iv"))
+    print(scrape(dining_halls.get("steast"), 22, 2, "Dinner", "steast"))
+    print(scrape(dining_halls.get("iv"), 22, 2, "Dinner", "iv"))
+    print(scrape(dining_halls.get("steast"), 23, 2, "Dinner", "steast"))
+    print(scrape(dining_halls.get("iv"), 23, 2, "Dinner", "iv"))
 
 if __name__ == "__main__":
     main()
