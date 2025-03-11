@@ -15,9 +15,10 @@ export enum FoodStation {
 }
 
 export interface NutritionUser {
+  docId: String;
   uid: String;
   name: String;
-  lastLoggedIn: String;
+  lastLoggedIn?: String;
   pfp: String;
 }
 
@@ -29,7 +30,7 @@ export interface Menu {
 }
 
 export interface Quantity {
-  value: Number;
+  value: number | string;
   unit: String;
 }
 
@@ -41,9 +42,11 @@ export interface Foods {
 }
 
 export interface Food {
+  docId?: String;
   name: String;
   description: String;
   foodStation: FoodStation;
+  mealTime: String;
   nutritionalInfo: NutritionalInfo;
   servingSize: Quantity;
   dietaryRestrictions: DietaryRestriction[];
@@ -61,7 +64,7 @@ export interface NutritionalInfo {
   carbohydrates: Quantity;
   fat: Quantity;
   saturatedFat: Quantity;
-  cholestrol: Quantity;
+  cholestrol?: Quantity;
   dietaryFiber: Quantity;
   sodium: Quantity;
   potassium: Quantity;
@@ -75,8 +78,17 @@ export interface NutritionalInfo {
 }
 
 export interface DailyLog {
+  docId: String;
   uid: String;
   date: String;
-  calorieGoal: Number;
+  calorieGoal: number;
   foods: Food[];
+}
+
+export interface FeedbackForm {
+  satification: number;
+  issues: String;
+  easiness: String;
+  features: String;
+  recommendation: String;
 }

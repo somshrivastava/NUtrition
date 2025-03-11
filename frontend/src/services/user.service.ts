@@ -1,6 +1,7 @@
 import { NutritionUser } from "../schema.type";
 import supabase from "../supabase";
 import { timestamp } from "../util";
+import { v4 as uuidv4 } from "uuid";
 
 // Read all users
 export const getUsers = async (callback: (users: NutritionUser[]) => void) => {
@@ -33,7 +34,10 @@ export const unsubscribeUsersChannel = () => {
 
 // Create a new user
 export const addUser = async (user: Omit<NutritionUser, "docId">): Promise<String> => {
-  const { data, error } = await supabase.from("users").insert([user]).select();
+  const { data, error } = await supabase
+    .from("users")
+    .insert([{ docId: uuidv4(), ...user }])
+    .select();
   if (data) {
     console.log(timestamp(), "| Added user:", user);
     return data[0].docId;

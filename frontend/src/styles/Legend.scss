@@ -1,0 +1,54 @@
+@use "./variables" as *;
+
+.page {
+  &-legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &-carbohydrates,
+    &-protein,
+    &-fat {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      &-color {
+        width: 2rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        border-radius: 0.1rem;
+      }
+    }
+
+    &-carbohydrates {
+      &-color {
+        background-color: $carbohydrates;
+      }
+
+      &-label {
+      }
+    }
+
+    &-protein {
+      &-color {
+        background-color: $protein;
+      }
+
+      &-label {
+      }
+    }
+
+    &-fat {
+      &-color {
+        background-color: $fat;
+      }
+
+      &-label {
+      }
+    }
+  }
+}

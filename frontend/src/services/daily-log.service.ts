@@ -1,10 +1,12 @@
 import { DailyLog } from "../schema.type";
 import supabase from "../supabase";
 import { timestamp } from "../util";
+import { v4 as uuidv4 } from "uuid";
 
 // Read all daily logs
 export const getDailyLogs = async (callback: (menus: DailyLog[]) => void) => {
   const { data: dailyLogs, error } = await supabase.from("dailyLogs").select("*");
+  console.log(dailyLogs);
   if (dailyLogs) {
     callback(dailyLogs);
     console.log(timestamp(), "| Got daily logs:", dailyLogs);
@@ -33,7 +35,10 @@ export const unsubscribeDailyLogsChannel = () => {
 
 // Create a new daily log
 export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<String> => {
-  const { data, error } = await supabase.from("dailyLogs").insert([dailyLog]).select();
+  const { data, error } = await supabase
+    .from("dailyLogs")
+    .insert([{ docId: uuidv4(), ...dailyLog } as DailyLog])
+    .select();
   if (data) {
     console.log(timestamp(), "| Added daily log:", dailyLog);
     return data[0].docId;
