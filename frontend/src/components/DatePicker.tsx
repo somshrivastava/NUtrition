@@ -9,7 +9,7 @@ const DatePicker: React.FC = () => {
 
   useEffect(() => {
     if (getDate() == undefined) {
-      sessionStorage.setItem("date", JSON.stringify(new Date()));
+      sessionStorage.setItem("date", JSON.stringify(new Date(2025, 1, 22)));
     }
     setDate(getDateObject(getDate()));
   }, []);
