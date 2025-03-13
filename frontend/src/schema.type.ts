@@ -15,23 +15,24 @@ export enum FoodStation {
 }
 
 export interface NutritionUser {
-  docId: String;
-  uid: String;
-  name: String;
-  lastLoggedIn?: String;
-  pfp: String;
+  docId: string;
+  uid: string;
+  name: string;
+  lastLoggedIn?: string;
+  pfp: string;
 }
 
 export interface Menu {
-  docId: String;
-  date: String;
+  docId: string;
+  date: string;
   diningHall: DiningHall;
+  mealTime: string;
   foods: Food[];
 }
 
 export interface Quantity {
   value: number | string;
-  unit: String;
+  unit: string;
 }
 
 export interface Foods {
@@ -42,20 +43,20 @@ export interface Foods {
 }
 
 export interface Food {
-  docId?: String;
-  name: String;
-  description: String;
+  docId?: string;
+  name: string;
+  description: string;
   foodStation: FoodStation;
-  mealTime: String;
+  mealTime: string;
   nutritionalInfo: NutritionalInfo;
   servingSize: Quantity;
   dietaryRestrictions: DietaryRestriction[];
 }
 
 export interface DietaryRestriction {
-  symbol: String;
-  name: String;
-  description: String;
+  symbol: string;
+  name: string;
+  description: string;
 }
 
 export interface NutritionalInfo {
@@ -74,21 +75,21 @@ export interface NutritionalInfo {
   vitaminD: Quantity;
   vitaminC: Quantity;
   vitaminA: Quantity;
-  ingredients: String;
+  ingredients: string;
 }
 
 export interface DailyLog {
-  docId: String;
-  uid: String;
-  date: String;
+  docId: string;
+  uid: string;
+  date: string;
   calorieGoal: number;
   foods: Food[];
 }
 
 export interface FeedbackForm {
   satification: number;
-  issues: String;
-  easiness: String;
-  features: String;
-  recommendation: String;
+  issues: string;
+  easiness: string;
+  features: string;
+  recommendation: string;
 }

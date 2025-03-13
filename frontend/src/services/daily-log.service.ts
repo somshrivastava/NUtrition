@@ -4,11 +4,14 @@ import { timestamp } from "../util";
 import { v4 as uuidv4 } from "uuid";
 
 // Read all daily logs
-export const getDailyLogs = async (callback: (menus: DailyLog[]) => void) => {
+export const getDailyLogs = async (
+  callback1: (dailyLogs: DailyLog[]) => void,
+  callback2: (dailyLogs: DailyLog[]) => void
+) => {
   const { data: dailyLogs, error } = await supabase.from("dailyLogs").select("*");
-  console.log(dailyLogs);
   if (dailyLogs) {
-    callback(dailyLogs);
+    callback1(dailyLogs);
+    callback2(dailyLogs);
     console.log(timestamp(), "| Got daily logs:", dailyLogs);
   } else if (error) {
     console.error(timestamp(), "| Error getting daily logs:", error);
@@ -16,13 +19,16 @@ export const getDailyLogs = async (callback: (menus: DailyLog[]) => void) => {
 };
 
 // Read all daily logs in realtime
-export const getDailyLogsRealtime = async (callback: (dailyLogs: DailyLog[]) => void) => {
-  getDailyLogs(callback);
+export const getDailyLogsRealtime = async (
+  callback1: (dailyLogs: DailyLog[]) => void,
+  callback2: (dailyLogs: DailyLog[]) => void
+) => {
+  getDailyLogs(callback1, callback2);
   return supabase
     .channel("dailyLogs")
     .on("postgres_changes", { event: "*", schema: "public", table: "dailyLogs" }, (payload) => {
       console.log(timestamp(), "| Got daily logs realtime callback:", payload);
-      getDailyLogs(callback);
+      getDailyLogs(callback1, callback2);
     })
     .subscribe();
 };
@@ -34,7 +40,7 @@ export const unsubscribeDailyLogsChannel = () => {
 };
 
 // Create a new daily log
-export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<String> => {
+export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<string> => {
   const { data, error } = await supabase
     .from("dailyLogs")
     .insert([{ docId: uuidv4(), ...dailyLog } as DailyLog])
@@ -48,7 +54,7 @@ export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<St
 };
 
 // Update a daily log
-export const updateDailyLog = async (docId: String, updates: Partial<DailyLog>): Promise<void> => {
+export const updateDailyLog = async (docId: string, updates: Partial<DailyLog>): Promise<void> => {
   const { data, error } = await supabase
     .from("dailyLogs")
     .update(updates)
@@ -62,7 +68,7 @@ export const updateDailyLog = async (docId: String, updates: Partial<DailyLog>):
 };
 
 // Delete a daily log
-export const deleteDailyLog = async (docId: String): Promise<void> => {
+export const deleteDailyLog = async (docId: string): Promise<void> => {
   const { error } = await supabase.from("dailyLogs").delete().eq("docId", docId);
   if (error) {
     console.error("Error deleting daily log:", error);
