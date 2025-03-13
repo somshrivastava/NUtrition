@@ -40,7 +40,7 @@ export const unsubscribeDailyLogsChannel = () => {
 };
 
 // Create a new daily log
-export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<String> => {
+export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<string> => {
   const { data, error } = await supabase
     .from("dailyLogs")
     .insert([{ docId: uuidv4(), ...dailyLog } as DailyLog])
@@ -54,7 +54,7 @@ export const addDailyLog = async (dailyLog: Omit<DailyLog, "docId">): Promise<St
 };
 
 // Update a daily log
-export const updateDailyLog = async (docId: String, updates: Partial<DailyLog>): Promise<void> => {
+export const updateDailyLog = async (docId: string, updates: Partial<DailyLog>): Promise<void> => {
   const { data, error } = await supabase
     .from("dailyLogs")
     .update(updates)
@@ -68,7 +68,7 @@ export const updateDailyLog = async (docId: String, updates: Partial<DailyLog>):
 };
 
 // Delete a daily log
-export const deleteDailyLog = async (docId: String): Promise<void> => {
+export const deleteDailyLog = async (docId: string): Promise<void> => {
   const { error } = await supabase.from("dailyLogs").delete().eq("docId", docId);
   if (error) {
     console.error("Error deleting daily log:", error);
