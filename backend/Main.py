@@ -1,8 +1,9 @@
 import os
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
-from dos import scrape  # Import scrape function from dos.py
+from scrape import scrape  # Import scrape function from dos.py
 from supabase import create_client, Client
+from datetime import datetime
 from datetime import datetime
 
 
@@ -23,37 +24,52 @@ def scraper():
     # Define dining halls mapping
     dining_halls = {
         "steast": "The Eatery at Stetson East",
-        "iv": "United Table at International Village",
-        "stwest": "Social House at Stetson West"
+        "iv": "United Table at International Village"
+        # "stwest": "Social House at Stetson West" # problems with stwest because not everyday and alsp no dinner
     }
+    
+    meals = ["Breakfast", "Lunch", "Dinner"]
+    
+    currentday = datetime.now().day -1
+    currentmonth = datetime.now().month -1 # scrape is 0 indexed 
+    
 
-    try:
-       
+    
+    
+    toreturn=[]
 
-       
 
-        # Call the scrape function from dos.py
-        #scraped_data = scrape(dining_halls[dining_hall_key], int(date.split("-")[2]) - 1, int(date.split("-")[1]), meal)
-        scraped_data = scrape(dining_halls.get("iv"), 13, 2, "Lunch")
+    for hall in dining_halls.values():
+        
+        for meal in meals: 
+            try:
+                print(f"starting scrape {hall}, {meal}")
+                # Call the scrape function from scrape.py
+                #scraped_data = scrape(dining_halls[dining_hall_key], int(date.split("-")[2]) - 1, int(date.split("-")[1]), meal)
+                scraped_data = scrape(hall, currentday, currentmonth, meal)
 
-        # Prepare database entry
-        #doc_id = f"{dining_hall_key}_{meal}_{date}"  # Unique identifier for the entry
-        doc_id = "steast_lunch_3.12"  # Unique identifier for the entry
-        entry = {
-            "docId": doc_id,
-            "date": str(datetime.now()),
-            "diningHall": dining_halls.get("iv"),
-            "mealTime": "Lunch", # hardcoded for now. 
-            "foods": scraped_data  # Store as a JSON array
-        }
+                # Prepare database entry
+                #doc_id = f"{dining_hall_key}_{meal}_{date}"  # Unique identifier for the entry
+                doc_id = f"{hall}_{meal}_{currentmonth + 1}_{currentday}"  # Unique identifier for the entry
+                entry = {
+                    "docId": doc_id,
+                    "date": str(datetime.now()),
+                    "diningHall": hall,
+                    "mealTime": meal, # hardcoded for now. 
+                    "foods": scraped_data  # Store as a JSON array
+                }
 
-        # Insert into Supabase
-        response = supabase.table("menus").upsert([entry]).execute()
+                # Insert into Supabase
+                response = supabase.table("menus").upsert([entry]).execute()
+                toreturn.append(response)
+                print(f"got a menu: {hall}, {meal}")
 
-        return jsonify({"message": "Scraped data inserted successfully", "data": response.data})
+                
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500  # Return error response
+            except Exception as e:
+                return jsonify({"error": str(e)}), 500  # Return error response
+        
+    return jsonify({"message": "Scraped data inserted successfully", "data": toreturn, "nummenus": len(toreturn)})
 
 
 @app.route("/", methods=["GET"])
