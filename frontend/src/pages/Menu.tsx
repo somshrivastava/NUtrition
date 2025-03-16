@@ -1,84 +1,78 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/Menu.scss";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { DailyLog, DiningHall, Food, Menu } from "../schema.type";
 import DatePicker from "../components/DatePicker";
 import { getMenus, unsubscribeMenusChannel } from "../services/menu.service";
-import { printDate, getDate } from "../util";
 import {
-  addDailyLog,
   getDailyLogs,
-  unsubscribeDailyLogsChannel,
+  addDailyLog,
   updateDailyLog,
+  unsubscribeDailyLogsChannel,
 } from "../services/daily-log.service";
-import { useAuth } from "../hooks/useAuth";
+import { printDate, getDate, timestamp } from "../util";
 import MenuItem from "../components/MenuItem";
 
-const diningHalls = Object.values(DiningHall);
-
-const Menu: React.FC = () => {
+const MenuPage: React.FC = () => {
+  const navigate = useNavigate();
+  const [date, setDate] = useState<Date>(getDate());
   const [selectedDiningHall, setSelectedDiningHall] = useState<DiningHall>(
     DiningHall.INTERNATIONAL_VILLAGE
   );
+  const [selectedMealTime, setSelectedMealTime] = useState<string>("Breakfast");
   const [menus, setMenus] = useState<Menu[]>([]);
   const [selectedMenu, setSelectedMenu] = useState<Menu | null>(null);
-  const [selectedMealTime, setSelectedMealTime] = useState<string>("Breakfast");
   const [dailyLogs, setDailyLogs] = useState<DailyLog[]>([]);
   const [selectedDailyLog, setSelectedDailyLog] = useState<DailyLog | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const { user } = useAuth();
-  const [date, setDate] = useState<Date>(getDate());
+
+  const [userId, setUserId] = useState<string>(sessionStorage.getItem("userId"));
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    getMenus(setMenus, onLoadMenus);
-    getDailyLogs(setDailyLogs, onLoadDailyLogs);
+    if (!userId) {
+      navigate("/");
+    }
+  }, [userId, navigate]);
 
+  useEffect(() => {
+    if (userId) {
+      setIsLoading(true);
+      getMenus(onLoadMenus, () => {});
+      getDailyLogs(onLoadDailyLogs, () => {});
+    } else {
+      setMenus([]);
+      setDailyLogs([]);
+      setSelectedDailyLog(null);
+    }
     return () => {
       unsubscribeMenusChannel();
       unsubscribeDailyLogsChannel();
     };
-  }, []);
+  }, [userId]);
 
   useEffect(() => {
-    if (menus.length > 0) {
-      findMenu(menus, date);
-    }
-  }, [menus, date, selectedMealTime, selectedDiningHall]);
+    findMenu();
+  }, [menus, date, selectedDiningHall, selectedMealTime]);
 
-  const handleDateChange = (newDate: Date) => {
-    setDate(newDate);
-    findMenu(menus, newDate);
-    updateDailyLogForDate(newDate);
-  };
-
-  const updateDailyLogForDate = (date: Date) => {
-    if (dailyLogs.length > 0 && user) {
-      const existingDailyLog = dailyLogs.find(
-        (dailyLog) =>
-          dailyLog.uid === user.uid && printDate(new Date(dailyLog.date)) === printDate(date)
-      );
-
-      if (!existingDailyLog) {
-        addDailyLog({
-          uid: user.uid,
-          date: printDate(date),
-          calorieGoal: 0,
-          foods: [],
-        }).then((docId) => {
-          setSelectedDailyLog({
-            uid: user.uid,
-            date: printDate(date),
-            calorieGoal: 0,
-            foods: [],
-            docId,
-          });
-        });
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      if (userId) {
+        updateDailyLogForUser();
       } else {
-        setSelectedDailyLog(existingDailyLog);
+        setSelectedDailyLog(null);
       }
     }
+  }, [date]);
+
+  const onLoadMenus = (loadedMenus: Menu[]) => {
+    setMenus(loadedMenus);
+    setIsLoading(false);
+    findMenu();
   };
 
   const onLoadDailyLogs = (loadedDailyLogs: DailyLog[]) => {
@@ -86,37 +80,66 @@ const Menu: React.FC = () => {
     setIsLoading(false);
   };
 
-  const onLoadMenus = (loadedMenus: Menu[]) => {
-    setMenus(loadedMenus);
-    findMenu(loadedMenus, date);
-  };
-
-  const findMenu = (loadedMenus: Menu[], date: Date) => {
-    setSelectedMenu(
-      loadedMenus.find(
-        (menu) =>
-          printDate(new Date(menu.date)) === printDate(date) &&
-          menu.diningHall === selectedDiningHall &&
-          menu.mealTime === selectedMealTime
-      ) || null
+  const findMenu = () => {
+    const menu = menus.find(
+      (menu) =>
+        printDate(new Date(menu.date)) === printDate(date) &&
+        menu.diningHall === selectedDiningHall &&
+        menu.mealTime === selectedMealTime
     );
+    setSelectedMenu(menu || null);
   };
 
-  const selectMealTime = (mealTime: string) => {
-    setSelectedMealTime(mealTime);
-  };
+  const updateDailyLogForUser = async () => {
+    if (!userId) return;
 
-  const selectDiningHall = (diningHall: DiningHall) => {
-    setSelectedDiningHall(diningHall);
+    const formattedDate = printDate(date);
+    const createdLogs = JSON.parse(sessionStorage.getItem("createdDailyLogs") || "[]");
+
+    const existingLog = dailyLogs.find(
+      (log) => log.uid === userId && printDate(new Date(log.date)) === formattedDate
+    );
+
+    if (existingLog) {
+      setSelectedDailyLog(existingLog);
+      return;
+    }
+
+    if (createdLogs.includes(formattedDate)) {
+      console.log(`Log for ${formattedDate} already tracked in sessionStorage.`);
+      return;
+    }
+
+    const docId = await addDailyLog({
+      uid: userId,
+      date: formattedDate,
+      calorieGoal: 2500,
+      foods: [],
+    });
+
+    const newLog = { uid: userId, date: formattedDate, calorieGoal: 0, foods: [], docId };
+    setSelectedDailyLog(newLog);
+    setDailyLogs((prevLogs) => [...prevLogs, newLog]);
+
+    createdLogs.push(formattedDate);
+    sessionStorage.setItem("createdDailyLogs", JSON.stringify(createdLogs));
   };
 
   const addFoodToDailyLog = (food: Food, servingSize: number) => {
     if (!selectedDailyLog) return;
 
+    const currentTimestamp = timestamp();
+
     const updatedFoods = [
       ...selectedDailyLog.foods,
-      { ...food, servingSize: { ...food.servingSize, value: servingSize } },
+      {
+        ...food,
+        servingSize: { ...food.servingSize, value: servingSize },
+        diningHall: selectedDiningHall,
+        addedAt: currentTimestamp,
+      },
     ];
+
     const updatedLog = { ...selectedDailyLog, foods: updatedFoods };
 
     setSelectedDailyLog(updatedLog);
@@ -127,55 +150,50 @@ const Menu: React.FC = () => {
     <p>Loading...</p>
   ) : (
     <div className="page">
-      <DatePicker onDateChange={handleDateChange} />
+      <DatePicker onDateChange={setDate} />
       <div className="page-dining-hall">
         <Dropdown
           value={selectedDiningHall}
-          onChange={(e) => selectDiningHall(e.value)}
-          options={diningHalls}
+          onChange={(e) => setSelectedDiningHall(e.value)}
+          options={Object.values(DiningHall)}
           optionLabel="name"
           placeholder="Select a Dining Hall"
         />
       </div>
-      <div className="page-timing">
-        <h3 className="page-timing-title">8:00 AM to 10:00 PM</h3>
-      </div>
       <div className="page-mealtime">
-        <Button
-          label="Breakfast"
-          severity={selectedMealTime === "Breakfast" ? "danger" : "secondary"}
-          onClick={() => selectMealTime("Breakfast")}
-        />
-        <Button
-          label="Lunch"
-          severity={selectedMealTime === "Lunch" ? "danger" : "secondary"}
-          onClick={() => selectMealTime("Lunch")}
-        />
-        <Button
-          label="Dinner"
-          severity={selectedMealTime === "Dinner" ? "danger" : "secondary"}
-          onClick={() => selectMealTime("Dinner")}
-        />
+        {["Breakfast", "Lunch", "Dinner"].map((meal) => (
+          <Button
+            key={meal}
+            label={meal}
+            severity={selectedMealTime === meal ? "danger" : "secondary"}
+            onClick={() => setSelectedMealTime(meal)}
+          />
+        ))}
       </div>
       <div className="page-menu">
-        <h1 className="page-menu-section-title">Cucina</h1>
-        <div className="page-menu-section-items">
-          {selectedMenu && selectedDailyLog ? (
-            selectedMenu.foods.map((item) => (
-              <MenuItem
-                key={item.docId}
-                item={item}
-                dailyLog={selectedDailyLog}
-                addFood={addFoodToDailyLog}
-              />
-            ))
-          ) : (
-            <p>No menu available</p>
-          )}
-        </div>
+        <h1 className="page-menu-section-title">Menu</h1>
+        {selectedMenu && selectedDailyLog ? (
+          Object.entries(
+            selectedMenu.foods.reduce((acc, food) => {
+              (acc[food.foodStation] ||= []).push(food);
+              return acc;
+            }, {} as Record<string, Food[]>)
+          ).map(([station, foods]) => (
+            <div key={station} className="page-menu-section">
+              <h2 className="page-menu-section-title">{station}</h2>
+              <div className="page-menu-section-items">
+                {foods.map((item) => (
+                  <MenuItem key={item.docId} item={item} addFood={addFoodToDailyLog} />
+                ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>No menu available</p>
+        )}
       </div>
     </div>
   );
 };
 
-export default Menu;
+export default MenuPage;

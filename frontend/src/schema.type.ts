@@ -31,7 +31,7 @@ export interface Menu {
 }
 
 export interface Quantity {
-  value: number | string;
+  value: number;
   unit: string;
 }
 
@@ -51,6 +51,8 @@ export interface Food {
   nutritionalInfo: NutritionalInfo;
   servingSize: Quantity;
   dietaryRestrictions: DietaryRestriction[];
+  addedAt?: string;
+  diningHall: string;
 }
 
 export interface DietaryRestriction {

@@ -6,15 +6,15 @@ import Menu from "./pages/Menu";
 import MealLog from "./pages/MealLog";
 import History from "./pages/History";
 import Feedback from "./pages/Feedback";
+import Login from "./pages/Login";
 
 function App() {
-  console.clear();
-
   return (
     <>
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/" element={<Login />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/meal-log" element={<MealLog />} />
           <Route path="/history" element={<History />} />

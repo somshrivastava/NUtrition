@@ -1,33 +1,76 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/Menu.scss";
 import "./../styles/MealLog.scss";
 import MacrosChart from "../components/MacrosChart";
 import Legend from "../components/Legend";
 import Meals from "../components/Meals";
-import { InputText } from "primereact/inputtext";
-import { ProgressBar } from "primereact/progressbar";
 import DatePicker from "../components/DatePicker";
-import { data } from "../sample.data";
+import { getDailyLogs, updateDailyLog } from "../services/daily-log.service";
+import { DailyLog, Food } from "../schema.type";
+import { useAuth } from "../hooks/useAuth";
+import { printDate, getDate } from "../util";
 
 const MealLog: React.FC = () => {
-  return (
-    <>
-      <div className="page">
-        <DatePicker />
-        <div className="page-calories">
-          <div className="page-calories-value">
-            <div className="page-calories-value-consumed">450 / </div>
-            <InputText className="page-calories-value-goal" keyfilter="int" placeholder="" />
-            <div className="page-calories-value-units">cals</div>
-          </div>
-          <ProgressBar className="page-calories-bar" value={37}></ProgressBar>
-        </div>
-        <MacrosChart carbohydrates={33} protein={33} fat={33} />
-        <Legend />
-        {/* <Meals title="Logged Meals" meals={data} /> */}
-      </div>
-    </>
-  );
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [date, setDate] = useState<Date>(getDate());
+  const [dailyLogs, setDailyLogs] = useState<DailyLog[]>([]);
+  const [selectedDailyLog, setSelectedDailyLog] = useState<DailyLog | null>(null);
+  const [calorieGoal, setCalorieGoal] = useState<number>(2000);
+
+  const userId = sessionStorage.getItem("userId");
+
+  useEffect(() => {
+    if (!userId) {
+      navigate("/");
+    }
+  }, [userId, navigate]);
+
+  useEffect(() => {
+    if (userId) {
+      getDailyLogs(onLoadDailyLogs, () => {});
+    } else {
+      setDailyLogs([]);
+      setSelectedDailyLog(null);
+    }
+  }, [userId]);
+
+  useEffect(() => {
+    if (dailyLogs.length > 0) {
+      findSelectedDailyLog();
+    }
+  }, [dailyLogs, date]);
+
+  const onLoadDailyLogs = (loadedDailyLogs: DailyLog[]) => {
+    setDailyLogs(loadedDailyLogs);
+    findSelectedDailyLog(loadedDailyLogs);
+  };
+
+  const findSelectedDailyLog = (logs = dailyLogs) => {
+    if (!userId) return;
+    const formattedDate = printDate(date);
+    const userLog = logs.find(
+      (log) => log.uid === userId && printDate(new Date(log.date)) === formattedDate
+    );
+    setSelectedDailyLog(userLog || null);
+    if (userLog?.calorieGoal) {
+      setCalorieGoal(userLog.calorieGoal);
+    }
+  };
+
+  return userId ? (
+    <div className="page">
+      <DatePicker onDateChange={setDate} />
+      <MacrosChart carbohydrates={20} protein={30} fat={50} />
+      <Legend />
+      {selectedDailyLog?.foods.length ? (
+        <Meals title="Logged Meals" meals={selectedDailyLog.foods} />
+      ) : (
+        <p>No meals logged.</p>
+      )}
+    </div>
+  ) : null;
 };
 
 export default MealLog;

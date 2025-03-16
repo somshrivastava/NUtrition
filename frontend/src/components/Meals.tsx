@@ -16,7 +16,7 @@ const Meals: React.FC<InputProps> = ({ title, meals }) => {
           {meals.map((meal: Food) => {
             return (
               <>
-                {/* <div className="page-meals-item">
+                <div className="page-meals-item">
                   <h3 className="page-meals-item-title">{meal.name}</h3>
                   <p className="page-meals-item-serving-size">
                     Serving Size: {meal.servingSize.value}&nbsp;
@@ -40,8 +40,8 @@ const Meals: React.FC<InputProps> = ({ title, meals }) => {
                       {meal.nutritionalInfo.fat.unit}
                     </div>
                   </div>
-                </div> */}
-                <div className="page-meals-item">
+                </div>
+                {/* <div className="page-meals-item">
                   <h3 className="page-meals-item-title">{meal.name}</h3>
                   <p className="page-meals-item-serving-size">
                     Serving Size: {meal.servingSize}&nbsp;
@@ -58,7 +58,7 @@ const Meals: React.FC<InputProps> = ({ title, meals }) => {
                     </div>
                     <div className="page-meals-item-macros-fat">{meal.nutritionalInfo.fat}</div>
                   </div>
-                </div>
+                </div> */}
               </>
             );
           })}
