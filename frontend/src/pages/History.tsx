@@ -76,17 +76,16 @@ const History: React.FC = () => {
     if (timeRange === "Past 3 Days") {
       const past3Days = new Date(baseDate);
       past3Days.setDate(baseDate.getDate() - 3);
-      filteredLogs = logs.filter(
+      filteredLogs = filteredLogs.filter(
         (log) => new Date(log.date) > past3Days && new Date(log.date) <= baseDate
       );
     } else if (timeRange === "Past 7 Days") {
       const past7Days = new Date(baseDate);
       past7Days.setDate(baseDate.getDate() - 7);
-      filteredLogs = logs.filter(
+      filteredLogs = filteredLogs.filter(
         (log) => new Date(log.date) > past7Days && new Date(log.date) <= baseDate
       );
     }
-
     const graphData = filteredLogs
       .map((log) => {
         const date = new Date(log.date);

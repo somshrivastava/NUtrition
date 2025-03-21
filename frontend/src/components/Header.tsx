@@ -73,7 +73,7 @@ const Header: React.FC = () => {
       await signOut(auth);
       setUser(null);
       sessionStorage.removeItem("userId");
-      sessionStorage.removeItem("createdDailyLogs");
+      // sessionStorage.removeItem("createdDailyLogs");
       navigate("/");
       console.log(timestamp(), "| Logged out user");
     } catch (error) {
