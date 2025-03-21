@@ -87,7 +87,7 @@ const Feedback: React.FC = () => {
               cols={30}
             />
           </div>
-          <Button label="Submit" />
+          <Button label="Submit" severity="danger" />
         </div>
       </div>
     </>

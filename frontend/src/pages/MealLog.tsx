@@ -60,7 +60,6 @@ const MealLog: React.FC = () => {
     }
   };
 
-  // ✅ Handle calorie goal input change & update in database
   const handleCalorieGoalChange = (value: string) => {
     const newGoal = parseInt(value, 10) || 0;
     setCalorieGoal(newGoal);
@@ -70,7 +69,6 @@ const MealLog: React.FC = () => {
     }
   };
 
-  // ✅ Delete a meal from daily log
   const handleDeleteFood = (foodIndex: number) => {
     if (!selectedDailyLog) return;
 
@@ -81,7 +79,6 @@ const MealLog: React.FC = () => {
     updateDailyLog(selectedDailyLog.docId, { foods: updatedFoods });
   };
 
-  // ✅ Edit serving size of a meal
   const handleEditFoodServing = (foodIndex: number, newServingSize: number) => {
     if (!selectedDailyLog) return;
 
@@ -97,7 +94,6 @@ const MealLog: React.FC = () => {
     updateDailyLog(selectedDailyLog.docId, { foods: updatedFoods });
   };
 
-  // ✅ Calculate total macros dynamically
   const calculateMacros = () => {
     let totalCalories = 0;
     let totalProtein = 0;
@@ -116,7 +112,6 @@ const MealLog: React.FC = () => {
     return { totalCalories, totalProtein, totalCarbs, totalFat };
   };
 
-  // ✅ Get calculated macro values
   const { totalCalories, totalProtein, totalCarbs, totalFat } = calculateMacros();
 
   const valueTemplate = () => {

@@ -8,10 +8,12 @@ interface InputProps {
 }
 
 const MacrosChart: React.FC<InputProps> = ({ carbohydrates, fat, protein }) => {
+  const total = carbohydrates + fat + protein;
+  console.log(carbohydrates, fat, protein);
   const data = [
-    { name: "Carbohydrates", value: carbohydrates },
-    { name: "Fat", value: fat },
-    { name: "Protein", value: protein },
+    { name: "Carbohydrates", value: carbohydrates / total },
+    { name: "Fat", value: fat / total },
+    { name: "Protein", value: protein / total },
   ];
 
   const COLORS = ["#14B8A6", "#FACC15", "#6D71F9"];

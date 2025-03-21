@@ -2,7 +2,6 @@
 
 .page {
   width: 100vw;
-  padding: 1.5rem 2rem;
 
   &-dining-hall {
     display: flex;
@@ -40,13 +39,13 @@
     margin-bottom: 1rem;
 
     &-breakfast {
-      width: 33%;
+      width: 35%;
       margin-right: 0.325rem;
       border-radius: 0.5rem 0 0 0.5rem;
     }
 
     &-lunch {
-      width: 33%;
+      width: 31%;
       margin-right: 0.325rem;
       border-radius: 0;
     }
@@ -145,6 +144,32 @@
 
         &-add-button {
           font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  &-dialog {
+    &-subtitle {
+      &-label {
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 0.4rem;
+      }
+
+      &-value {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-nutrition-list {
+      margin: 0;
+      &-item {
+        margin-bottom: 0.15rem;
+        &-label {
+        }
+
+        &-value {
         }
       }
     }

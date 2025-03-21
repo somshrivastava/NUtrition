@@ -16,12 +16,22 @@
         margin-bottom: 1rem;
         border-bottom: 1px solid white;
       }
+
+      &-input {
+        margin-bottom: 0.1rem;
+
+        & .p-inputtext {
+          font-size: 0.85rem;
+          height: 2rem;
+        }
+      }
+
       &-title {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
       }
 
       &-serving-size {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.1rem;
       }
 
       &-macros {
@@ -29,6 +39,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        margin-bottom: 0.5rem;
 
         &-calories,
         &-carbohydrates,
@@ -37,28 +48,42 @@
           color: #000000;
           font-size: 0.85rem;
           font-weight: bold;
-          padding: 0.3rem 0.5rem;
+          padding: 0.35rem 0.45rem;
           border-radius: 0.25rem;
         }
 
         &-calories {
-          background-color: #ffffff;
+          background-color: rgba($calories, 0.9);
           margin-right: 0.6rem;
         }
 
         &-carbohydrates {
-          background-color: $carbohydrates;
+          background-color: rgba($carbohydrates, 0.9);
           margin-right: 0.6rem;
         }
 
         &-protein {
-          background-color: $protein;
+          background-color: rgba($protein, 0.9);
           margin-right: 0.6rem;
         }
 
         &-fat {
-          background-color: $fat;
+          background-color: rgba($fat, 0.9);
+          margin-right: 0.6rem;
         }
+      }
+    }
+
+    &-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      &-button {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.5rem !important;
+        margin-right: 0.6rem;
       }
     }
   }

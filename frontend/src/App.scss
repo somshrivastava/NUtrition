@@ -1,7 +1,16 @@
 @use "./styles/variables" as *;
+@import "primeicons/primeicons.css";
+
+.page {
+  padding: 1.25rem 1.5rem;
+}
 
 .p-dialog {
   border: none !important;
+
+  &-title {
+    color: $primary-color;
+  }
 
   &-header {
     background-color: $background-color !important;
@@ -13,6 +22,18 @@
     padding: 1rem 1.5rem !important;
     background-color: $background-color !important;
   }
+}
+
+.p-toast {
+  width: 90% !important;
+}
+
+.p-toast-message-success {
+  background-color: rgba(16, 185, 129, 0.5);
+}
+
+.p-toast-message {
+  background-color: #1d1d1d !important;
 }
 
 // #root {

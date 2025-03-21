@@ -5,9 +5,13 @@ const Legend: React.FC = () => {
   return (
     <>
       <div className="page-legend">
+        <div className="page-legend-calories">
+          <div className="page-legend-calories-color"></div>
+          <p className="page-legend-calories-label">Calories (g)</p>
+        </div>
         <div className="page-legend-carbohydrates">
           <div className="page-legend-carbohydrates-color"></div>
-          <p className="page-legend-carbohydrates-labe">Carbohydrates (g)</p>
+          <p className="page-legend-carbohydrates-label">Carbs (g)</p>
         </div>
         <div className="page-legend-protein">
           <div className="page-legend-protein-color"></div>

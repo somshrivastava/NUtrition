@@ -4,12 +4,18 @@
   min-height: 100vh;
   width: 100vw;
 
-  &-history-time {
+  &-options {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 1rem;
+
+    &-option {
+      &:first-child {
+        margin-right: 1.5rem;
+      }
+    }
   }
 
   &-line-graph {
@@ -28,7 +34,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+
+    &-toggle {
+      margin-bottom: 1.5rem;
+    }
 
     &-row {
       width: 100%;
@@ -43,16 +53,16 @@
     &-carbohydrates,
     &-protein,
     &-fat {
-      width: 9rem;
-      height: 9rem;
+      width: 7.5rem;
+      height: 7.5rem;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       color: black;
     }
 
     &-calories {
       margin-right: 1.5rem;
-      background-color: white;
+      background-color: $calories;
     }
 
     &-carbohydrates {
