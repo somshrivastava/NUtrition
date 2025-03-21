@@ -5,16 +5,28 @@ import "./../styles/History.scss";
 import Legend from "./../components/Legend";
 import { Dropdown } from "primereact/dropdown";
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
   Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+  Legend as ChartLegend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 import { getDailyLogs } from "../services/daily-log.service";
 import { DailyLog } from "../schema.type";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  ChartLegend
+);
 
 const History: React.FC = () => {
   const navigate = useNavigate();
@@ -114,9 +126,6 @@ const History: React.FC = () => {
     setSelectedData(graphData);
   };
 
-  const selectedMacroColor =
-    MacroOptions.find((option) => option.value === selectedMacro)?.color || "#ff7300";
-
   const numberOfDays = selectedData.length;
   const averageMacros = {
     calories:
@@ -139,6 +148,35 @@ const History: React.FC = () => {
       numberOfDays > 0
         ? Math.round(selectedData.reduce((sum, day) => sum + toNumber(day.fat), 0) / numberOfDays)
         : 0,
+  };
+
+  const chartLabels = selectedData.map((entry) => entry.name);
+  const chartValues = selectedData.map((entry) => entry[selectedMacro]);
+  const selectedMacroColor =
+    MacroOptions.find((option) => option.value === selectedMacro)?.color || "#ff7300";
+
+  const chartData = {
+    labels: chartLabels,
+    datasets: [
+      {
+        label: selectedMacro.charAt(0).toUpperCase() + selectedMacro.slice(1),
+        data: chartValues,
+        borderColor: selectedMacroColor,
+        backgroundColor: selectedMacroColor,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: false,
+      title: {
+        display: true,
+        text: `Daily ${selectedMacro.charAt(0).toUpperCase() + selectedMacro.slice(1)}`,
+      },
+    },
   };
 
   return (
@@ -164,25 +202,9 @@ const History: React.FC = () => {
       </div>
 
       <div className="page-line-graph">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            width={500}
-            height={350}
-            data={selectedData}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Line
-              type="monotone"
-              dataKey={selectedMacro}
-              stroke={selectedMacroColor}
-              activeDot={{ r: 8 }}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+        <div style={{ height: "100%", width: "100%" }}>
+          <Line options={chartOptions} data={chartData} />
+        </div>
       </div>
 
       <Legend />
@@ -204,7 +226,7 @@ const History: React.FC = () => {
                 <div className="page-macros-row">
                   <Button
                     className="page-macros-calories"
-                    label={`${selectedData.reduce(
+                    label={`Calories: ${selectedData.reduce(
                       (sum, day) => sum + toNumber(day.calories),
                       0
                     )} cal`}
@@ -212,17 +234,23 @@ const History: React.FC = () => {
                   />
                   <Button
                     className="page-macros-carbohydrates"
-                    label={`${selectedData.reduce((sum, day) => sum + toNumber(day.carbs), 0)}g`}
+                    label={`Carbs: ${selectedData.reduce(
+                      (sum, day) => sum + toNumber(day.carbs),
+                      0
+                    )}g`}
                   />
                 </div>
                 <div className="page-macros-row">
                   <Button
                     className="page-macros-protein"
-                    label={`${selectedData.reduce((sum, day) => sum + toNumber(day.protein), 0)}g`}
+                    label={`Protein: ${selectedData.reduce(
+                      (sum, day) => sum + toNumber(day.protein),
+                      0
+                    )}g`}
                   />
                   <Button
                     className="page-macros-fat"
-                    label={`${selectedData.reduce((sum, day) => sum + toNumber(day.fat), 0)}g`}
+                    label={`Fat: ${selectedData.reduce((sum, day) => sum + toNumber(day.fat), 0)}g`}
                   />
                 </div>
               </>
@@ -231,14 +259,20 @@ const History: React.FC = () => {
                 <div className="page-macros-row">
                   <Button
                     className="page-macros-calories"
-                    label={`${averageMacros.calories} cal`}
+                    label={`Calories: ${averageMacros.calories} cal`}
                     severity="danger"
                   />
-                  <Button className="page-macros-carbohydrates" label={`${averageMacros.carbs}g`} />
+                  <Button
+                    className="page-macros-carbohydrates"
+                    label={`Carbs: ${averageMacros.carbs}g`}
+                  />
                 </div>
                 <div className="page-macros-row">
-                  <Button className="page-macros-protein" label={`${averageMacros.protein}g`} />
-                  <Button className="page-macros-fat" label={`${averageMacros.fat}g`} />
+                  <Button
+                    className="page-macros-protein"
+                    label={`Protein: ${averageMacros.protein}g`}
+                  />
+                  <Button className="page-macros-fat" label={`Fat: ${averageMacros.fat}g`} />
                 </div>
               </>
             )}
