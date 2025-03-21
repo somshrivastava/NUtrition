@@ -95,6 +95,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
           </p>
         </p>
         <p className="page-dialog-subtitle">
+          <p className="page-dialog-subtitle-label">Ingredients:</p>
+          <p className="page-dialog-subtitle-value">{item.ingredients}</p>
+        </p>
+        <p className="page-dialog-subtitle">
           <p className="page-dialog-subtitle-label">Nutritional Information (per serving):</p>
         </p>
         <ul className="page-dialog-nutrition-list" style={{ paddingLeft: "1rem" }}>

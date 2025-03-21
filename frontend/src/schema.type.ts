@@ -53,6 +53,7 @@ export interface Food {
   dietaryRestrictions: DietaryRestriction[];
   addedAt?: string;
   diningHall: string;
+  ingredients: string;
 }
 
 export interface DietaryRestriction {
