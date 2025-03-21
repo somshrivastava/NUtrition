@@ -17,6 +17,11 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 app = Flask(__name__)
 
+
+@app.route("/", methods =["GET"])
+def tester(): 
+    return jsonify({"message" : "nutrition oasis backend v1 running. "})
+
 @app.route("/scrape", methods=["GET"])
 def scraper():
     """Scrapes dining hall menu and inserts into Supabase."""
@@ -61,7 +66,7 @@ def scraper():
 
                 # Insert into Supabase
                 response = supabase.table("menus").upsert([entry]).execute()
-                toreturn.append(response)
+                toreturn.append(response) 
                 print(f"got a menu: {hall}, {meal}")
 
                 
@@ -71,6 +76,48 @@ def scraper():
         
     return jsonify({"message": "Scraped data inserted successfully", "data": toreturn, "nummenus": len(toreturn)})
 
+
+
+@app.route("/<dining_hall>/<meal>/<month>/<day>", methods=["GET"])
+def get_steast(dining_hall,meal, month, day):
+    
+    dining_halls = {
+        "steast": "The Eatery at Stetson East",
+        "iv": "United Table at International Village"
+        # "stwest": "Social House at Stetson West" # problems with stwest because not everyday and alsp no dinner
+    }
+    
+    if dining_hall not in dining_halls.keys():
+        return jsonify({"error": "dining hall invalid"})
+
+    try: 
+        
+        former_hall = dining_halls.get(dining_hall)
+        
+        
+        doc_id = f"{dining_hall}_{month}.{day}.2025"
+        
+        
+        scraped_data = scrape(former_hall, int(day), int(month) - 1, meal)
+        
+        entry = {
+            "docId": doc_id,
+            "date": str(datetime.now()),
+            "diningHall": former_hall,
+            "mealTime": meal, # hardcoded for now. 
+            "foods": scraped_data  # Store as a JSON array
+        }
+        
+        response = supabase.table("menus").upsert([entry]).execute()
+        
+        return jsonify({"success" : "i think ", "data": response})
+        
+        
+        
+        
+        
+    except Exception as e: 
+        return jsonify({"error": str(e)})    
 
 @app.route("/", methods=["GET"])
 def server_check():

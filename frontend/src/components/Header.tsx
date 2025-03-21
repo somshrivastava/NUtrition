@@ -10,19 +10,20 @@ import { searchInList, timestamp } from "../util";
 import { auth } from "../firebase";
 import { NutritionUser } from "../schema.type";
 import { addUser, getUsersRealtime, unsubscribeUsersChannel } from "../services/user.service";
+import { MenuItem } from "primereact/menuitem";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState<NutritionUser[]>([]);
   const { user, setUser } = useAuth();
   const menuRef = useRef(null);
-  const menu = [
+  const menu: MenuItem[] = [
     { label: "Menu", command: () => navigate("/menu") },
     { label: "Meal Log", command: () => navigate("/meal-log") },
     { label: "History", command: () => navigate("/history") },
     { label: "Feedback", command: () => navigate("/feedback") },
     {
-      label: (
+      template: (
         <>
           {user ? (
             <div className="header-logout">

@@ -24,9 +24,11 @@ def parse_nutritional_info(text):
         if ":" in line:
             key, value = map(str.strip, line.split(":", 1))
             value = value.replace("+", "").strip()
+            value = value.replace("-", "").strip()
 
             if value.isdigit():
                 value = int(value)
+            
             
             key_map = {
                 "Calories": "calories", "Protein": "protein", 
@@ -60,19 +62,16 @@ def get_headless_driver():
 
 def scrape(dining_hall, day, month, meal):
     """Scrapes the NU Dining menu in headless mode."""
-    
     driver = get_headless_driver()  # Use headless driver
     driver.get("https://www.nudining.com/public/whats-on-the-menu")
     
     try:
         wait = WebDriverWait(driver, 15)
-
         # Select Dining Hall
         dining_hall_dropdown = wait.until(
             EC.element_to_be_clickable((By.ID, "menu-location-selector__BV_toggle_"))
         )
         dining_hall_dropdown.click()
-
         selected_dining_hall_button = wait.until(
             EC.element_to_be_clickable((By.XPATH, f"//button[contains(text(), '{dining_hall}')]"))
         )
@@ -82,7 +81,6 @@ def scrape(dining_hall, day, month, meal):
         date_picker = driver.find_element(By.ID, "menuDatePicker")
         date_picker.click()
         arrows = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "vc-svg-icon")))
-
         current_month_number = 2  # Hardcoded for now
         target_month_number = month
         
@@ -140,7 +138,7 @@ def scrape(dining_hall, day, month, meal):
                     modal = WebDriverWait(driver, 5).until(
                         EC.visibility_of_element_located((By.CLASS_NAME, "modal-content"))
                     )
-                    item_nutri_info = modal.text  # Store raw text for now
+                    item_nutri_info = parse_nutritional_info(modal.text)  # Store raw text for now
 
                     # Close Modal
                     close_btn = WebDriverWait(driver, 5).until(
