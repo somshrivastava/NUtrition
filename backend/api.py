@@ -3,6 +3,7 @@
 from flask import Flask, request, jsonify
 from config import app, supabase
 from models import Meal, Item, DiningHall, User
+from webscrape import scrape
 
 
 @app.route("/", methods = ["GET"])
@@ -119,6 +120,15 @@ def get_all_meals():
         return jsonify(response.data), 200
 
     return jsonify({"error": "No meals found in the database"}), 404
+
+
+@app.route("/get_all_items_from_meal/<string:dining_hall>/<int:month>/<int:day>/<string:meal>", methods =["GET"])
+def get_items_from(dining_hall, month, day, meal):
+    data = scrape(dining_hall, day, month, meal )
+    
+    print("got meals from date")
+    return jsonify({"data": data}),200
+
 
 
     
