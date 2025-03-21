@@ -1,3 +1,20 @@
+@use "./styles/variables" as *;
+
+.p-dialog {
+  border: none !important;
+
+  &-header {
+    background-color: $background-color !important;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 1px solid rgba(white, 0.5) !important;
+  }
+
+  &-content {
+    padding: 1rem 1.5rem !important;
+    background-color: $background-color !important;
+  }
+}
+
 // #root {
 //   max-width: 1280px;
 //   margin: 0 auto;

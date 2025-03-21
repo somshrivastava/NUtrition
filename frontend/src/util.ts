@@ -23,3 +23,11 @@ export const printDate = (date: Date) => {
 export const getDate = (): Date => {
   return new Date(JSON.parse(sessionStorage.getItem("date")));
 };
+
+export const capitalizeWords = (words: string): string => {
+  return words
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};

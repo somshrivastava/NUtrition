@@ -12,15 +12,15 @@ import {
   updateDailyLog,
   unsubscribeDailyLogsChannel,
 } from "../services/daily-log.service";
-import { printDate, getDate, timestamp } from "../util";
+import { printDate, getDate, timestamp, capitalizeWords } from "../util";
 import MenuItem from "../components/MenuItem";
+import UpArrowSvg from "./../assets/up-arrow.svg";
+import DownArrowSvg from "./../assets/down-arrow.svg";
 
 const MenuPage: React.FC = () => {
   const navigate = useNavigate();
   const [date, setDate] = useState<Date>(getDate());
-  const [selectedDiningHall, setSelectedDiningHall] = useState<DiningHall>(
-    DiningHall.INTERNATIONAL_VILLAGE
-  );
+  const [selectedDiningHall, setSelectedDiningHall] = useState<DiningHall>(DiningHall.STETSON_EAST);
   const [selectedMealTime, setSelectedMealTime] = useState<string>("Breakfast");
   const [menus, setMenus] = useState<Menu[]>([]);
   const [selectedMenu, setSelectedMenu] = useState<Menu | null>(null);
@@ -30,6 +30,8 @@ const MenuPage: React.FC = () => {
 
   const [userId, setUserId] = useState<string>(sessionStorage.getItem("userId"));
   const isInitialMount = useRef(true);
+
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     if (!userId) {
@@ -146,6 +148,13 @@ const MenuPage: React.FC = () => {
     updateDailyLog(selectedDailyLog.docId, { foods: updatedFoods });
   };
 
+  const toggleSection = (station: string) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [station]: !prev[station],
+    }));
+  };
+
   return isLoading ? (
     <p>Loading...</p>
   ) : (
@@ -160,9 +169,13 @@ const MenuPage: React.FC = () => {
           placeholder="Select a Dining Hall"
         />
       </div>
+      <div className="page-timing">
+        <h3 className="page-timing-title">8:00 AM to 10:00 PM</h3>
+      </div>
       <div className="page-mealtime">
         {["Breakfast", "Lunch", "Dinner"].map((meal) => (
           <Button
+            className={"page-mealtime-" + meal.toLowerCase()}
             key={meal}
             label={meal}
             severity={selectedMealTime === meal ? "danger" : "secondary"}
@@ -171,23 +184,41 @@ const MenuPage: React.FC = () => {
         ))}
       </div>
       <div className="page-menu">
-        <h1 className="page-menu-section-title">Menu</h1>
         {selectedMenu && selectedDailyLog ? (
           Object.entries(
             selectedMenu.foods.reduce((acc, food) => {
               (acc[food.foodStation] ||= []).push(food);
               return acc;
             }, {} as Record<string, Food[]>)
-          ).map(([station, foods]) => (
-            <div key={station} className="page-menu-section">
-              <h2 className="page-menu-section-title">{station}</h2>
-              <div className="page-menu-section-items">
-                {foods.map((item) => (
-                  <MenuItem key={item.docId} item={item} addFood={addFoodToDailyLog} />
-                ))}
+          )
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([station, foods]) => (
+              <div key={station} className="page-menu-section">
+                <div className="page-menu-section-header" onClick={() => toggleSection(station)}>
+                  <h2 className="page-menu-section-header-title">{capitalizeWords(station)}</h2>
+                  {expandedSections[station] ? (
+                    <img
+                      className="page-menu-section-header-arrow"
+                      src={UpArrowSvg}
+                      alt="Up Arrow SVG"
+                    />
+                  ) : (
+                    <img
+                      className="page-menu-section-header-arrow"
+                      src={DownArrowSvg}
+                      alt="Down Arrow SVG"
+                    />
+                  )}
+                </div>
+                {expandedSections[station] && (
+                  <div className="page-menu-section-items">
+                    {foods.map((item) => (
+                      <MenuItem key={item.docId} item={item} addFood={addFoodToDailyLog} />
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))
+            ))
         ) : (
           <p>No menu available</p>
         )}
