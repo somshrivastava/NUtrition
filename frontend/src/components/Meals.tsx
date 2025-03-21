@@ -27,8 +27,8 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
               <InputNumber
                 value={newServingSize !== null ? newServingSize : meal.servingSize.value} // ✅ Mirror current serving size
                 onValueChange={(e) => setNewServingSize(e.value || meal.servingSize.value)}
-                min={0.1}
-                step={0.1}
+                min={1}
+                step={1}
                 suffix={` ${meal.servingSize.unit}`}
               />
             ) : (
@@ -63,6 +63,24 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
                 />
               )}
               <Button label="Delete" severity="danger" onClick={() => onDelete(index)} />
+            </div>
+            <div className="page-meals-item-macros">
+              <div className="page-meals-item-macros-calories">
+                {meal.nutritionalInfo.calories.value}
+                {meal.nutritionalInfo.calories.unit}
+              </div>
+              <div className="page-meals-item-macros-carbohydrates">
+                {meal.nutritionalInfo.carbohydrates.value}
+                {meal.nutritionalInfo.carbohydrates.unit}
+              </div>
+              <div className="page-meals-item-macros-protein">
+                {meal.nutritionalInfo.protein.value}
+                {meal.nutritionalInfo.protein.unit}
+              </div>
+              <div className="page-meals-item-macros-fat">
+                {meal.nutritionalInfo.fat.value}
+                {meal.nutritionalInfo.fat.unit}
+              </div>
             </div>
           </div>
         ))}

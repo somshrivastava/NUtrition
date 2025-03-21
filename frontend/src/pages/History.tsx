@@ -22,14 +22,14 @@ const History: React.FC = () => {
   const userId = sessionStorage.getItem("userId");
 
   const [dailyLogs, setDailyLogs] = useState<DailyLog[]>([]);
-  const [selectedTime, setSelectedTime] = useState<string>("Today");
+  const [selectedTime, setSelectedTime] = useState<string>("Past 3 Days");
   const [selectedData, setSelectedData] = useState<any[]>([]);
   const [selectedMacro, setSelectedMacro] = useState<string>("calories"); // ✅ Default: Calories
 
   // ✅ Set fixed base date (February 24th, 2025)
   const baseDate = new Date(2025, 1, 24); // February 24th, 2025
 
-  const TimeOptions = [{ time: "Today" }, { time: "Past 3 Days" }, { time: "Past 7 Days" }];
+  const TimeOptions = ["Past 3 Days", "Past 7 Days"];
   const MacroOptions = [
     { name: "Calories", value: "calories", color: "#ff7300" }, // Orange
     { name: "Protein", value: "protein", color: "#82ca9d" }, // Green
@@ -117,9 +117,9 @@ const History: React.FC = () => {
       <div className="page-history-time">
         <Dropdown
           value={selectedTime}
-          onChange={(e) => setSelectedTime(e.value.time)}
+          onChange={(e) => setSelectedTime(e.value)}
           options={TimeOptions}
-          optionLabel="time"
+          optionLabel=""
           placeholder="Select Time Range"
         />
       </div>
@@ -128,7 +128,7 @@ const History: React.FC = () => {
       <div className="page-history-macro">
         <Dropdown
           value={selectedMacro}
-          onChange={(e) => setSelectedMacro(e.value.value)}
+          onChange={(e) => setSelectedMacro(e.value)}
           options={MacroOptions}
           optionLabel="name"
           placeholder="Select Macro to View"
@@ -137,7 +137,7 @@ const History: React.FC = () => {
 
       {/* ✅ Line Graph for Selected Macro */}
       <div className="page-line-graph">
-        <ResponsiveContainer width="100%" height={400}>
+        <ResponsiveContainer width="100%" height="100%">
           <LineChart
             width={500}
             height={350}

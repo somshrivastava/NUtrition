@@ -119,6 +119,14 @@ const MealLog: React.FC = () => {
   // ✅ Get calculated macro values
   const { totalCalories, totalProtein, totalCarbs, totalFat } = calculateMacros();
 
+  const valueTemplate = () => {
+    return (
+      <React.Fragment>
+        {Math.round((totalCalories / calorieGoal + Number.EPSILON) * 100)}%
+      </React.Fragment>
+    );
+  };
+
   return userId ? (
     <div className="page">
       <DatePicker onDateChange={setDate} />
@@ -137,6 +145,7 @@ const MealLog: React.FC = () => {
         <ProgressBar
           className="page-calories-bar"
           value={(totalCalories / calorieGoal) * 100}
+          displayValueTemplate={valueTemplate}
         ></ProgressBar>
       </div>
       <MacrosChart carbohydrates={totalCarbs} protein={totalProtein} fat={totalFat} />
