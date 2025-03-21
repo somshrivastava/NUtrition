@@ -23,7 +23,7 @@ const Login: React.FC = () => {
   return (
     <div className="login-page">
       <h1>Login to Access Your Meal Log</h1>
-      <Button label="Sign in with Google" severity="primary" onClick={handleLogin} />
+      <Button label="Sign in with Google" severity="danger" onClick={handleLogin} />
     </div>
   );
 };

@@ -167,7 +167,7 @@ const History: React.FC = () => {
     ],
   };
 
-  const chartOptions = {
+  const chartOptions: any = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {

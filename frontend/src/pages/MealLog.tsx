@@ -132,7 +132,7 @@ const MealLog: React.FC = () => {
             className="page-calories-value-goal"
             keyfilter="int"
             placeholder=""
-            value={calorieGoal}
+            value={calorieGoal.toString()}
             onChange={(e) => handleCalorieGoalChange(e.target.value)}
           />
           <div className="page-calories-value-units">cals</div>
