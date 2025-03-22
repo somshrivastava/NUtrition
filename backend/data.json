@@ -1,7 +1,8 @@
 {
   "name": "English Breakfast Baked Beans",
-  "description": "",
+  "description": "Traditional tomato baked beans with maple and spices",
   "foodStation": "CUCINA",
+  "mealTime": "Breakfast",
   "nutritionalInfo": {
     "calories": { "value": 35.0, "unit": "cal" },
     "protein": { "value": 8.0, "unit": "g" },
@@ -22,5 +23,5 @@
   },
   "servingSize": { "value": 0.5, "unit": "cup" },
   "dietaryRestrictions": [],
-  "timeLogged": "2025-03-21T23:23:46.012598"
+  "diningHall": "Stetson East"
 }

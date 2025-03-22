@@ -40,7 +40,6 @@ def scraper():
         doc_id = str(uuid.uuid4())
         dt = datetime(year, month, day, 0, 0, 0)
         formatted_date = dt.strftime("%-m/%-d/%Y, %-I:%M:%S %p")
-        print(formatted_date)
         scraped_data = scrape(dining_hall, day, month, mealtime)
 
         entry = {

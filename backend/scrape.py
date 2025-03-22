@@ -10,7 +10,6 @@ import json
 import re
 
 def parse_serving_size(serv_size):
-    """Parses a serving size string like '1/2 cup' into a Quantity object."""
     match = re.match(r"(\d+\s*/\s*\d+|\d+(?:\.\d+)?)(.*)", serv_size.strip())
     
     if not match:
@@ -204,14 +203,24 @@ def scrape(dining_hall, day, month, meal):
                     print(f"Error retrieving nutrition info for {food_name}: {e}")
                     item_nutri_info = {}
 
+                try:
+                    food_description = WebDriverWait(item, 7.5).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "td"))
+                    ).find_element(By.CSS_SELECTOR, "div").find_element(By.CSS_SELECTOR, "span").text.split("\n")[2]
+                except Exception as e:
+                    print("Error for ", food_description, e)
+                    driver.quit()
+
                 # Creating food object
                 food_object = {
                     "name": food_name,
-                    "description": "",
+                    "description": food_description if food_description != "Nutritional Info" else "",  #TODO
                     "foodStation": cat_name,
+                    "mealTime": meal,
                     "nutritionalInfo": parse_nutritional_info(item_nutri_info),
                     "servingSize": parse_serving_size(serv_size),
-                    "dietaryRestrictions": []
+                    "dietaryRestrictions": [],
+                    "diningHall": dining_hall
                 }
                 print("Got food object", food_object)
                 
