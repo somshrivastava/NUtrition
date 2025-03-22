@@ -7,6 +7,7 @@ import MealLog from "./pages/MealLog";
 import History from "./pages/History";
 import Feedback from "./pages/Feedback";
 import Login from "./pages/Login";
+import React from "react";
 
 function App() {
   return (

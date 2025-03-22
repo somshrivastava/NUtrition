@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import LogoSvg from "./../assets/logo.svg";
 import HamburgerSvg from "./../assets/hamburger.svg";
 import "./../styles/Header.scss";
-import { Menu } from "primereact/menu";
+import { Menu, MenuProps } from "primereact/menu";
 import { useNavigate } from "react-router";
 import { useAuth } from "../hooks/useAuth";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   const [users, setUsers] = useState<NutritionUser[]>([]);
   const { user, setUser } = useAuth();
   const menuRef = useRef(null);
-  const menu = [
+  const menu: any = [
     { label: "Menu", command: () => navigate("/menu") },
     { label: "Meal Log", command: () => navigate("/meal-log") },
     { label: "History", command: () => navigate("/history") },
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
       await signOut(auth);
       setUser(null);
       sessionStorage.removeItem("userId");
-      sessionStorage.removeItem("createdDailyLogs");
+      // sessionStorage.removeItem("createdDailyLogs");
       navigate("/");
       console.log(timestamp(), "| Logged out user");
     } catch (error) {

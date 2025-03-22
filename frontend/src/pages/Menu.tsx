@@ -96,7 +96,8 @@ const MenuPage: React.FC = () => {
     if (!userId) return;
 
     const formattedDate = printDate(date);
-    const createdLogs = JSON.parse(sessionStorage.getItem("createdDailyLogs") || "[]");
+    const createdLogsMap = JSON.parse(sessionStorage.getItem("createdDailyLogs") || "{}");
+    const createdLogs = createdLogsMap[userId] || [];
 
     const existingLog = dailyLogs.find(
       (log) => log.uid === userId && printDate(new Date(log.date)) === formattedDate
@@ -108,23 +109,26 @@ const MenuPage: React.FC = () => {
     }
 
     if (createdLogs.includes(formattedDate)) {
-      console.log(`Log for ${formattedDate} already tracked in sessionStorage.`);
+      console.log(`Log for ${formattedDate} already tracked for user ${userId}.`);
       return;
     }
 
-    const docId = await addDailyLog({
-      uid: userId,
-      date: formattedDate,
-      calorieGoal: 2500,
-      foods: [],
-    });
+    if (formattedDate != "December 31, 1969") {
+      const docId = await addDailyLog({
+        uid: userId,
+        date: formattedDate,
+        calorieGoal: 2500,
+        foods: [],
+      });
+      const newLog = { uid: userId, date: formattedDate, calorieGoal: 0, foods: [], docId };
+      setSelectedDailyLog(newLog);
+      setDailyLogs((prevLogs) => [...prevLogs, newLog]);
 
-    const newLog = { uid: userId, date: formattedDate, calorieGoal: 0, foods: [], docId };
-    setSelectedDailyLog(newLog);
-    setDailyLogs((prevLogs) => [...prevLogs, newLog]);
-
-    createdLogs.push(formattedDate);
-    sessionStorage.setItem("createdDailyLogs", JSON.stringify(createdLogs));
+      // Update sessionStorage with new log date for this user
+      createdLogs.push(formattedDate);
+      createdLogsMap[userId] = createdLogs;
+      sessionStorage.setItem("createdDailyLogs", JSON.stringify(createdLogsMap));
+    }
   };
 
   const addFoodToDailyLog = (food: Food, servingSize: number) => {
