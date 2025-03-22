@@ -12,7 +12,8 @@ const DatePicker: React.FC<{
   useEffect(() => {
     if (!sessionStorage.getItem("date")) {
       // TODO: needs to be changed before deployment
-      sessionStorage.setItem("date", JSON.stringify(new Date(2025, 1, 23)));
+      sessionStorage.setItem("date", JSON.stringify(new Date()));
+      // sessionStorage.setItem("date", JSON.stringify(new Date(2025, 1, 23)));
     }
     const storedDate = getDate();
     setDate(storedDate);

@@ -80,6 +80,21 @@ const MenuPage: React.FC = () => {
   const onLoadDailyLogs = (loadedDailyLogs: DailyLog[]) => {
     setDailyLogs(loadedDailyLogs);
     setIsLoading(false);
+
+    const createdLogsMap = JSON.parse(sessionStorage.getItem("createdDailyLogs") || "{}");
+    const userLogs = createdLogsMap[userId] || [];
+
+    const updatedLogSet = new Set(userLogs);
+
+    loadedDailyLogs.forEach((log) => {
+      if (log.uid === userId) {
+        const formattedDate = printDate(new Date(log.date));
+        updatedLogSet.add(formattedDate);
+      }
+    });
+
+    createdLogsMap[userId] = Array.from(updatedLogSet);
+    sessionStorage.setItem("createdDailyLogs", JSON.stringify(createdLogsMap));
   };
 
   const findMenu = () => {

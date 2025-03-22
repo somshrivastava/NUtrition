@@ -4,6 +4,7 @@ import { auth } from "../firebase";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { Button } from "primereact/button";
+import "./../styles/Login.scss";
 
 const Login: React.FC = () => {
   const { user, setUser } = useAuth();
@@ -21,9 +22,10 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="login-page">
-      <h1>Login to Access Your Meal Log</h1>
-      <Button label="Sign in with Google" severity="danger" onClick={handleLogin} />
+    <div className="page">
+      <div className="page-login-container">
+        <Button label="Sign in with Google" severity="danger" onClick={handleLogin} />
+      </div>
     </div>
   );
 };

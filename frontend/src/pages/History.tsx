@@ -38,7 +38,8 @@ const History: React.FC = () => {
   const [selectedMacro, setSelectedMacro] = useState<string>("calories");
   const [macroDisplayType, setMacroDisplayType] = useState<"Total" | "Average">("Total");
 
-  const baseDate = new Date(2025, 1, 23);
+  // const baseDate = new Date(2025, 1, 23);
+  const baseDate = new Date();
 
   const TimeOptions = ["Past 3 Days", "Past 7 Days"];
   const MacroOptions = [
