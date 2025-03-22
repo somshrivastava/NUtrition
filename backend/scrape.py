@@ -7,43 +7,94 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import json
 
-def parse_nutritional_info(text):
-    """Extracts and parses nutritional information from the modal."""
+import re
+
+def parse_serving_size(serv_size):
+    """Parses a serving size string like '1/2 cup' into a Quantity object."""
+    match = re.match(r"(\d+\s*/\s*\d+|\d+(?:\.\d+)?)(.*)", serv_size.strip())
     
-    nutritional_data = {
-        "calories": None, "protein": None, "carbohydrates": None, "fat": None,
-        "saturatedFat": None, "cholesterol": None, "dietaryFiber": None, "sodium": None,
-        "potassium": None, "calcium": None, "iron": None, "transFat": None,
-        "vitaminD": None, "vitaminC": None, "vitaminA": None, "ingredients": None
+    if not match:
+        return {"value": 0, "unit": "unknown"}
+
+    raw_value = match.group(1).strip()
+    unit = match.group(2).strip().lower()
+
+    try:
+        if "/" in raw_value:
+            numerator, denominator = map(int, raw_value.split("/"))
+            value = numerator / denominator
+        else:
+            value = float(raw_value)
+    except:
+        value = 0
+
+    return {
+        "value": value,
+        "unit": unit
     }
+
+def parse_nutritional_info(text):
+    """Extracts and parses nutritional information and formats it into Quantity schema."""
     
+    def to_quantity(value, unit):
+        try:
+            numeric_value = float(value)
+        except ValueError:
+            numeric_value = 0
+        return {"value": numeric_value, "unit": unit}
+
+    nutritional_data = {
+        "calories": to_quantity(0, "kcal"),
+        "protein": to_quantity(0, "g"),
+        "carbohydrates": to_quantity(0, "g"),
+        "fat": to_quantity(0, "g"),
+        "saturatedFat": to_quantity(0, "g"),
+        "cholestrol": to_quantity(0, "mg"),
+        "dietaryFiber": to_quantity(0, "g"),
+        "sodium": to_quantity(0, "mg"),
+        "potassium": to_quantity(0, "mg"),
+        "calcium": to_quantity(0, "mg"),
+        "iron": to_quantity(0, "mg"),
+        "transFat": to_quantity(0, "g"),
+        "vitaminD": to_quantity(0, "mcg"),
+        "vitaminC": to_quantity(0, "mg"),
+        "vitaminA": to_quantity(0, "mcg"),
+        "ingredients": ""
+    }
+
+    unit_map = {
+        "calories": "cal", "protein": "g", "carbohydrates": "g", "fat": "g",
+        "saturatedFat": "g", "cholestrol": "mg", "dietaryFiber": "g", "sodium": "mg",
+        "potassium": "mg", "calcium": "mg", "iron": "mg", "transFat": "g",
+        "vitaminD": "mcg", "vitaminC": "mg", "vitaminA": "mcg"
+    }
+
+    key_map = {
+        "Calories": "calories", "Protein": "protein", 
+        "Total Carbohydrates": "carbohydrates", "Carbohydrates": "carbohydrates",
+        "Total Fat": "fat", "Fat": "fat", "Saturated Fat": "saturatedFat",
+        "Cholesterol": "cholestrol", "Dietary Fiber": "dietaryFiber", 
+        "Sodium": "sodium", "Potassium": "potassium", "Calcium": "calcium", 
+        "Iron": "iron", "Trans Fat": "transFat", "Vitamin D": "vitaminD",
+        "Vitamin C": "vitaminC", "Vitamin A": "vitaminA", "Ingredients": "ingredients"
+    }
+
     lines = text.split("\n")
-    
+
     for line in lines:
         line = line.strip()
         if ":" in line:
             key, value = map(str.strip, line.split(":", 1))
-            value = value.replace("+", "").strip()
+            value = value.replace("+", "").replace("-", "0").strip()
 
-            if value.isdigit():
-                value = int(value)
-            
-            key_map = {
-                "Calories": "calories", "Protein": "protein", 
-                "Total Carbohydrates": "carbohydrates", "Total Fat": "fat",
-                "Saturated Fat": "saturatedFat", "Cholesterol": "cholesterol",
-                "Dietary Fiber": "dietaryFiber", "Sodium": "sodium",
-                "Potassium": "potassium", "Calcium": "calcium", "Iron": "iron",
-                "Trans Fat": "transFat", "Vitamin D": "vitaminD",
-                "Vitamin C": "vitaminC", "Vitamin A": "vitaminA",
-                "Ingredients": "ingredients"
-            }
-            
-            for k, v in key_map.items():
-                if k in key:
-                    nutritional_data[v] = value
-                    break
-                
+            mapped_key = next((v for k, v in key_map.items() if k in key), None)
+            if mapped_key:
+                if mapped_key == "ingredients":
+                    nutritional_data["ingredients"] = value
+                else:
+                    unit = unit_map.get(mapped_key, "g")
+                    nutritional_data[mapped_key] = to_quantity(value, unit)
+
     return nutritional_data
 
 def get_headless_driver():
@@ -83,7 +134,7 @@ def scrape(dining_hall, day, month, meal):
         date_picker.click()
         arrows = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "vc-svg-icon")))
 
-        current_month_number = 2  # Hardcoded for now
+        current_month_number = 3  # Hardcoded for now
         target_month_number = month
         
         while target_month_number != current_month_number:
@@ -158,11 +209,11 @@ def scrape(dining_hall, day, month, meal):
                     "name": food_name,
                     "description": "",
                     "foodStation": cat_name,
-                    "nutritionalInfo": item_nutri_info,
-                    "servingSize": serv_size,
-                    "dietaryRestrictions": [],
-                    "timeLogged": datetime.now().isoformat()
+                    "nutritionalInfo": parse_nutritional_info(item_nutri_info),
+                    "servingSize": parse_serving_size(serv_size),
+                    "dietaryRestrictions": []
                 }
+                print("Got food object", food_object)
                 
                 food_items.append(food_object)
 
