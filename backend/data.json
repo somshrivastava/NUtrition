@@ -1,0 +1,27 @@
+{
+  "name": "English Breakfast Baked Beans",
+  "description": "Traditional tomato baked beans with maple and spices",
+  "foodStation": "CUCINA",
+  "mealTime": "Breakfast",
+  "nutritionalInfo": {
+    "calories": { "value": 35.0, "unit": "cal" },
+    "protein": { "value": 8.0, "unit": "g" },
+    "carbohydrates": { "value": 29.0, "unit": "g" },
+    "fat": { "value": 0.0, "unit": "g" },
+    "saturatedFat": { "value": 0.0, "unit": "g" },
+    "cholestrol": { "value": 0.0, "unit": "mg" },
+    "dietaryFiber": { "value": 6.0, "unit": "g" },
+    "sodium": { "value": 380.0, "unit": "mg" },
+    "potassium": { "value": 560.0, "unit": "mg" },
+    "calcium": { "value": 70.0, "unit": "mg" },
+    "iron": { "value": 2.4, "unit": "mg" },
+    "transFat": { "value": 0.0, "unit": "g" },
+    "vitaminD": { "value": 0.0, "unit": "mcg" },
+    "vitaminC": { "value": 6.0, "unit": "mg" },
+    "vitaminA": { "value": 5.0, "unit": "mcg" },
+    "ingredients": "Cannellini Beans (White Kidney Beans, Water, Salt, Calcium Chloride, Disodium Edta), Tomato puree (tomato puree, water, tomato paste, citric acid), Onions, Maple Syrup, Tomato paste (tomato paste, salt, citric acid), Canola Oil, Worcestershire Sauce with Anchovies, Garlic, Salt, Paprika (Paprika and Silicon Dioxide), Black Pepper, Thyme"
+  },
+  "servingSize": { "value": 0.5, "unit": "cup" },
+  "dietaryRestrictions": [],
+  "diningHall": "Stetson East"
+}
