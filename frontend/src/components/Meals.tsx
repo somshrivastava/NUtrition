@@ -23,6 +23,7 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
   };
 
   const saveFood = (index: number, meal: Food): React.MouseEventHandler<HTMLButtonElement> => {
+    console.log("asdfasdf");
     return () => {
       onEdit(index, newServingSize !== null ? newServingSize : meal.servings);
       setEditingIndex(null);
@@ -56,18 +57,28 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
               </div>
               <div className="page-meals-actions">
                 {editingIndex === index ? (
-                  <>
-                    <Button
-                      className="page-meals-actions-button"
-                      icon="pi pi-check"
-                      onClick={saveFood(index, meal)}
-                    />
-                  </>
+                  <Button
+                    className="page-meals-actions-button"
+                    icon="pi pi-check"
+                    onClick={() => {
+                      console.log("Edited");
+                      onEdit(
+                        index,
+                        newServingSize !== null ? newServingSize : meal.servingSize.value
+                      );
+                      setEditingIndex(null);
+                      setNewServingSize(null);
+                    }}
+                  />
                 ) : (
                   <Button
                     className="page-meals-actions-button"
                     icon="pi pi-pencil"
-                    onClick={editFood(index, meal)}
+                    onClick={() => {
+                      console.log("Editing");
+                      setEditingIndex(index);
+                      setNewServingSize(meal.servings);
+                    }}
                   />
                 )}
                 <Button

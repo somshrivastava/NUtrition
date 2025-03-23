@@ -119,10 +119,10 @@ def get_headless_driver():
     """Returns a headless Selenium WebDriver."""
     options = webdriver.FirefoxOptions()  # Use ChromeOptions() for Chrome
     
-    options.add_argument("--headless")  # Run in headless mode (no GUI)
-    options.add_argument("--disable-gpu")  # Disable GPU acceleration (fixes some issues)
-    options.add_argument("--no-sandbox")  # Bypass OS security model (needed for some servers)
-    options.add_argument("--disable-dev-shm-usage")  # Prevent resource issues in Docker
+    # options.add_argument("--headless")  # Run in headless mode (no GUI)
+    # options.add_argument("--disable-gpu")  # Disable GPU acceleration (fixes some issues)
+    # options.add_argument("--no-sandbox")  # Bypass OS security model (needed for some servers)
+    # options.add_argument("--disable-dev-shm-usage")  # Prevent resource issues in Docker
     
     driver = webdriver.Firefox(options=options)  # Use Chrome() if needed
     return driver
