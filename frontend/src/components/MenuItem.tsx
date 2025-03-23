@@ -89,11 +89,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
         </p>
         <p className="page-dialog-subtitle">
           <p className="page-dialog-subtitle-label">Serving Size:</p>
-          <p className="page-dialog-subtitle-value">{item.servingSize.value}</p>
-        </p>
-        <p className="page-dialog-subtitle">
-          <p className="page-dialog-subtitle-label">Ingredients:</p>
-          <p className="page-dialog-subtitle-value">{item.ingredients}</p>
+          <p className="page-dialog-subtitle-value">
+            {item.servingSize.value} {item.servingSize.unit}
+          </p>
         </p>
         <p className="page-dialog-subtitle">
           <p className="page-dialog-subtitle-label">Nutritional Information (per serving):</p>
@@ -160,6 +158,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
             </span>
           </li>
         </ul>
+        <p className="page-dialog-subtitle">
+          <p className="page-dialog-subtitle-label">Ingredients:</p>
+          <p className="page-dialog-subtitle-value">{item.nutritionalInfo.ingredients}</p>
+        </p>
       </Dialog>
     </>
   );

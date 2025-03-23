@@ -18,7 +18,6 @@ export interface NutritionUser {
   docId: string;
   uid: string;
   name: string;
-  lastLoggedIn?: string;
   pfp: string;
 }
 
@@ -39,7 +38,6 @@ export interface Foods {
   breakfast: Food[];
   lunch: Food[];
   dinner: Food[];
-  everyday: Food[];
 }
 
 export interface Food {
@@ -54,7 +52,6 @@ export interface Food {
   dietaryRestrictions: DietaryRestriction[];
   addedAt?: string;
   diningHall: string;
-  ingredients: string;
 }
 
 export interface DietaryRestriction {
