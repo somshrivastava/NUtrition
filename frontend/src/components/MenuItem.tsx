@@ -8,11 +8,11 @@ import { Food } from "../schema.type";
 
 interface MenuItemProps {
   item: Food;
-  addFood: (food: Food, servingSize: number) => void;
+  addFood: (food: Food, servings: number) => void;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
-  const [servingSize, setServingSize] = useState<number>(1);
+  const [servings, setServings] = useState<number>(1);
   const [showDialog, setShowDialog] = useState<boolean>(false);
   const toastRef = useRef<any>(null);
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
   };
 
   const handleAdd = () => {
-    addFood(item, servingSize);
+    addFood(item, servings);
 
     toastRef.current.show({
       severity: "success",
@@ -59,12 +59,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
         <div className="page-menu-section-item-buttons">
           <InputNumber
             className="page-menu-section-item-serving-size"
-            value={servingSize}
-            onValueChange={(e) => setServingSize(e.value || 1)}
+            value={servings}
+            onValueChange={(e) => setServings(e.value || 1)}
             mode="decimal"
             showButtons
             min={1}
-            max={100}
           />
           <Button
             label="Add +"
@@ -90,9 +89,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, addFood }) => {
         </p>
         <p className="page-dialog-subtitle">
           <p className="page-dialog-subtitle-label">Serving Size:</p>
-          <p className="page-dialog-subtitle-value">
-            {item.servingSize.value} {item.servingSize.unit}
-          </p>
+          <p className="page-dialog-subtitle-value">{item.servingSize.value}</p>
         </p>
         <p className="page-dialog-subtitle">
           <p className="page-dialog-subtitle-label">Ingredients:</p>

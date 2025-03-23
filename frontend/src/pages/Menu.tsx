@@ -1,25 +1,30 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import "./../styles/Menu.scss";
-import { Dropdown } from "primereact/dropdown";
+
 import { Button } from "primereact/button";
-import { DailyLog, DiningHall, Food, Menu } from "../schema.type";
-import DatePicker from "../components/DatePicker";
-import { getMenus, unsubscribeMenusChannel } from "../services/menu.service";
-import {
-  getDailyLogs,
-  addDailyLog,
-  updateDailyLog,
-  unsubscribeDailyLogsChannel,
-} from "../services/daily-log.service";
-import { printDate, getDate, timestamp, capitalizeWords } from "../util";
+import { Dropdown } from "primereact/dropdown";
+
 import MenuItem from "../components/MenuItem";
+import DatePicker from "../components/DatePicker";
 import UpArrowSvg from "./../assets/up-arrow.svg";
 import DownArrowSvg from "./../assets/down-arrow.svg";
+import { DailyLog, DiningHall, Food, Menu } from "../schema.type";
+import { getMenus, unsubscribeMenusChannel } from "../services/menu.service";
+import { capitalizeWords, getDateFromSessionStorage, printDate, timestamp } from "../util";
+import {
+  addDailyLog,
+  getDailyLogs,
+  unsubscribeDailyLogsChannel,
+  updateDailyLog,
+} from "../services/daily-log.service";
+
+import "./../styles/Menu.scss";
 
 const MenuPage: React.FC = () => {
   const navigate = useNavigate();
-  const [date, setDate] = useState<Date>(getDate());
+
+  const [date, setDate] = useState<Date>(getDateFromSessionStorage());
   const [selectedDiningHall, setSelectedDiningHall] = useState<DiningHall>(DiningHall.STETSON_EAST);
   const [selectedMealTime, setSelectedMealTime] = useState<string>("Breakfast");
   const [menus, setMenus] = useState<Menu[]>([]);
@@ -27,8 +32,8 @@ const MenuPage: React.FC = () => {
   const [dailyLogs, setDailyLogs] = useState<DailyLog[]>([]);
   const [selectedDailyLog, setSelectedDailyLog] = useState<DailyLog | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
   const [userId, setUserId] = useState<string>(sessionStorage.getItem("userId"));
+
   const isInitialMount = useRef(true);
 
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
@@ -42,8 +47,8 @@ const MenuPage: React.FC = () => {
   useEffect(() => {
     if (userId) {
       setIsLoading(true);
-      getMenus(onLoadMenus, () => {});
-      getDailyLogs(onLoadDailyLogs, () => {});
+      getMenus(onLoadMenus);
+      getDailyLogs(onLoadDailyLogs);
     } else {
       setMenus([]);
       setDailyLogs([]);
@@ -109,7 +114,6 @@ const MenuPage: React.FC = () => {
 
   const updateDailyLogForUser = async () => {
     if (!userId) return;
-
     const formattedDate = printDate(date);
     const createdLogsMap = JSON.parse(sessionStorage.getItem("createdDailyLogs") || "{}");
     const createdLogs = createdLogsMap[userId] || [];
@@ -124,7 +128,6 @@ const MenuPage: React.FC = () => {
     }
 
     if (createdLogs.includes(formattedDate)) {
-      console.log(`Log for ${formattedDate} already tracked for user ${userId}.`);
       return;
     }
 
@@ -135,27 +138,27 @@ const MenuPage: React.FC = () => {
         calorieGoal: 2500,
         foods: [],
       });
+
       const newLog = { uid: userId, date: formattedDate, calorieGoal: 0, foods: [], docId };
+
       setSelectedDailyLog(newLog);
       setDailyLogs((prevLogs) => [...prevLogs, newLog]);
 
-      // Update sessionStorage with new log date for this user
       createdLogs.push(formattedDate);
       createdLogsMap[userId] = createdLogs;
       sessionStorage.setItem("createdDailyLogs", JSON.stringify(createdLogsMap));
     }
   };
 
-  const addFoodToDailyLog = (food: Food, servingSize: number) => {
+  const addFoodToDailyLog = (food: Food, servings: number) => {
     if (!selectedDailyLog) return;
-
     const currentTimestamp = timestamp();
 
     const updatedFoods = [
       ...selectedDailyLog.foods,
       {
         ...food,
-        servingSize: { ...food.servingSize, value: servingSize },
+        servings: servings,
         diningHall: selectedDiningHall,
         addedAt: currentTimestamp,
       },

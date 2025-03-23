@@ -1,0 +1,13 @@
+.page {
+  &-container {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &-chart {
+      width: 75%;
+    }
+  }
+}

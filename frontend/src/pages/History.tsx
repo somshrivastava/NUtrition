@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
+
+import { Line } from "react-chartjs-2";
 import { useNavigate } from "react-router-dom";
-import { Button } from "primereact/button";
-import "./../styles/History.scss";
-import Legend from "./../components/Legend";
-import { Dropdown } from "primereact/dropdown";
 import {
-  Chart as ChartJS,
   CategoryScale,
+  Chart as ChartJS,
+  Legend as ChartLegend,
   LinearScale,
-  PointElement,
   LineElement,
+  PointElement,
   Title,
   Tooltip,
-  Legend as ChartLegend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
-import { getDailyLogs } from "../services/daily-log.service";
+
+import { Button } from "primereact/button";
+import { Dropdown } from "primereact/dropdown";
+
 import { DailyLog } from "../schema.type";
+import Legend from "./../components/Legend";
+import { getDailyLogs } from "../services/daily-log.service";
+
+import "./../styles/History.scss";
 
 ChartJS.register(
   CategoryScale,
@@ -38,23 +42,22 @@ const History: React.FC = () => {
   const [selectedMacro, setSelectedMacro] = useState<string>("calories");
   const [macroDisplayType, setMacroDisplayType] = useState<"Total" | "Average">("Total");
 
-  // const baseDate = new Date(2025, 1, 23);
   const baseDate = new Date();
 
-  const TimeOptions = ["Past 3 Days", "Past 7 Days"];
-  const MacroOptions = [
+  const timeOptions = ["Past 3 Days", "Past 7 Days"];
+  const macroOptions = [
     { name: "Calories", value: "calories", color: "#c4a484" },
     { name: "Protein", value: "protein", color: "#facc15" },
     { name: "Carbs", value: "carbs", color: "#14b8a6" },
     { name: "Fat", value: "fat", color: "#6d71f9" },
   ];
-  const MacroDisplayOptions = ["Total", "Average"];
+  const macroStatOptions = ["Total", "Average"];
 
   useEffect(() => {
     if (!userId) {
       navigate("/");
     } else {
-      getDailyLogs(onLoadDailyLogs, () => {});
+      getDailyLogs(onLoadDailyLogs);
     }
   }, [userId]);
 
@@ -98,24 +101,21 @@ const History: React.FC = () => {
           }),
           calories: log.foods.reduce(
             (sum, food) =>
-              sum +
-              toNumber(food.nutritionalInfo.calories.value) * toNumber(food.servingSize.value),
+              sum + toNumber(food.nutritionalInfo.calories.value) * toNumber(food.servings),
             0
           ),
           protein: log.foods.reduce(
             (sum, food) =>
-              sum + toNumber(food.nutritionalInfo.protein.value) * toNumber(food.servingSize.value),
+              sum + toNumber(food.nutritionalInfo.protein.value) * toNumber(food.servings),
             0
           ),
           carbs: log.foods.reduce(
             (sum, food) =>
-              sum +
-              toNumber(food.nutritionalInfo.carbohydrates.value) * toNumber(food.servingSize.value),
+              sum + toNumber(food.nutritionalInfo.carbohydrates.value) * toNumber(food.servings),
             0
           ),
           fat: log.foods.reduce(
-            (sum, food) =>
-              sum + toNumber(food.nutritionalInfo.fat.value) * toNumber(food.servingSize.value),
+            (sum, food) => sum + toNumber(food.nutritionalInfo.fat.value) * toNumber(food.servings),
             0
           ),
         };
@@ -153,7 +153,7 @@ const History: React.FC = () => {
   const chartLabels = selectedData.map((entry) => entry.name);
   const chartValues = selectedData.map((entry) => entry[selectedMacro]);
   const selectedMacroColor =
-    MacroOptions.find((option) => option.value === selectedMacro)?.color || "#ff7300";
+    macroOptions.find((option) => option.value === selectedMacro)?.color || "#ff7300";
 
   const chartData = {
     labels: chartLabels,
@@ -186,7 +186,7 @@ const History: React.FC = () => {
           <Dropdown
             value={selectedTime}
             onChange={(e) => setSelectedTime(e.value)}
-            options={TimeOptions}
+            options={timeOptions}
             placeholder="Select Time Range"
           />
         </div>
@@ -194,7 +194,7 @@ const History: React.FC = () => {
           <Dropdown
             value={selectedMacro}
             onChange={(e) => setSelectedMacro(e.value)}
-            options={MacroOptions}
+            options={macroOptions}
             optionLabel="name"
             placeholder="Select Macro"
           />
@@ -216,7 +216,7 @@ const History: React.FC = () => {
               <Dropdown
                 value={macroDisplayType}
                 onChange={(e) => setMacroDisplayType(e.value)}
-                options={MacroDisplayOptions}
+                options={macroStatOptions}
                 placeholder="Select Display"
               />
             </div>
@@ -230,7 +230,6 @@ const History: React.FC = () => {
                       (sum, day) => sum + toNumber(day.calories),
                       0
                     )} cal`}
-                    severity="danger"
                   />
                   <Button
                     className="page-macros-carbohydrates"
@@ -260,7 +259,6 @@ const History: React.FC = () => {
                   <Button
                     className="page-macros-calories"
                     label={`Calories: ${averageMacros.calories} cal`}
-                    severity="danger"
                   />
                   <Button
                     className="page-macros-carbohydrates"

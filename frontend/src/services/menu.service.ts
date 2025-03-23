@@ -1,17 +1,14 @@
-import { Menu } from "../schema.type";
-import supabase from "../supabase";
-import { timestamp } from "../util";
 import { v4 as uuidv4 } from "uuid";
 
+import supabase from "../supabase";
+import { timestamp } from "../util";
+import { Menu } from "../schema.type";
+
 // Read all menus
-export const getMenus = async (
-  callback1: (menus: Menu[]) => void,
-  callback2: (menus: Menu[]) => void
-) => {
+export const getMenus = async (callback: (menus: Menu[]) => void) => {
   const { data: menus, error } = await supabase.from("menus").select("*");
   if (menus) {
-    callback1(menus);
-    callback2(menus);
+    callback(menus);
     console.log(timestamp(), "| Got menus:", menus);
   } else if (error) {
     console.error(timestamp(), "| Error getting menus:", error);
@@ -19,16 +16,13 @@ export const getMenus = async (
 };
 
 // Read all menus in realtime
-export const getMenusRealtime = async (
-  callback1: (menus: Menu[]) => void,
-  callback2: (menus: Menu[]) => void
-) => {
-  getMenus(callback1, callback2);
+export const getMenusRealtime = async (callback: (menus: Menu[]) => void) => {
+  getMenus(callback);
   return supabase
     .channel("menus")
     .on("postgres_changes", { event: "*", schema: "public", table: "menus" }, (payload) => {
       console.log(timestamp(), "| Got menus realtime callback:", payload);
-      getMenus(callback1, callback2);
+      getMenus(callback);
     })
     .subscribe();
 };

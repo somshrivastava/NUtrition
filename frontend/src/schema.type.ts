@@ -50,6 +50,7 @@ export interface Food {
   mealTime: string;
   nutritionalInfo: NutritionalInfo;
   servingSize: Quantity;
+  servings: number;
   dietaryRestrictions: DietaryRestriction[];
   addedAt?: string;
   diningHall: string;
@@ -90,7 +91,7 @@ export interface DailyLog {
 }
 
 export interface FeedbackForm {
-  satification: number;
+  satisfaction: number;
   issues: string;
   easiness: string;
   features: string;

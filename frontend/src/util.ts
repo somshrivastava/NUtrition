@@ -20,7 +20,7 @@ export const printDate = (date: Date) => {
   return date.toLocaleDateString(undefined, options);
 };
 
-export const getDate = (): Date => {
+export const getDateFromSessionStorage = (): Date => {
   return new Date(JSON.parse(sessionStorage.getItem("date")));
 };
 

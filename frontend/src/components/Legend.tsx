@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./../styles/Legend.scss";
 
 const Legend: React.FC = () => {

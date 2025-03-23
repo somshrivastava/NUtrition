@@ -1,13 +1,17 @@
-import "./App.scss";
-import "primereact/resources/themes/lara-dark-blue/theme.css";
-import { BrowserRouter, Routes, Route } from "react-router";
-import Header from "./components/Header";
+import React from "react";
+
+import { BrowserRouter, Route, Routes } from "react-router";
+
 import Menu from "./pages/Menu";
+import Login from "./pages/Login";
 import MealLog from "./pages/MealLog";
 import History from "./pages/History";
 import Feedback from "./pages/Feedback";
-import Login from "./pages/Login";
-import React from "react";
+import Header from "./components/Header";
+
+import "primereact/resources/themes/lara-dark-blue/theme.css";
+
+import "./App.scss";
 
 function App() {
   return (

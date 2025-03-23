@@ -1,17 +1,14 @@
-import { DailyLog } from "../schema.type";
-import supabase from "../supabase";
-import { timestamp } from "../util";
 import { v4 as uuidv4 } from "uuid";
 
+import supabase from "../supabase";
+import { timestamp } from "../util";
+import { DailyLog } from "../schema.type";
+
 // Read all daily logs
-export const getDailyLogs = async (
-  callback1: (dailyLogs: DailyLog[]) => void,
-  callback2: (dailyLogs: DailyLog[]) => void
-) => {
+export const getDailyLogs = async (callback: (dailyLogs: DailyLog[]) => void) => {
   const { data: dailyLogs, error } = await supabase.from("dailyLogs").select("*");
   if (dailyLogs) {
-    callback1(dailyLogs);
-    callback2(dailyLogs);
+    callback(dailyLogs);
     console.log(timestamp(), "| Got daily logs:", dailyLogs);
   } else if (error) {
     console.error(timestamp(), "| Error getting daily logs:", error);
@@ -20,15 +17,15 @@ export const getDailyLogs = async (
 
 // Read all daily logs in realtime
 export const getDailyLogsRealtime = async (
-  callback1: (dailyLogs: DailyLog[]) => void,
+  callback: (dailyLogs: DailyLog[]) => void,
   callback2: (dailyLogs: DailyLog[]) => void
 ) => {
-  getDailyLogs(callback1, callback2);
+  getDailyLogs(callback);
   return supabase
     .channel("dailyLogs")
     .on("postgres_changes", { event: "*", schema: "public", table: "dailyLogs" }, (payload) => {
       console.log(timestamp(), "| Got daily logs realtime callback:", payload);
-      getDailyLogs(callback1, callback2);
+      getDailyLogs(callback);
     })
     .subscribe();
 };

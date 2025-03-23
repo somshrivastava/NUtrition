@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import "./../styles/Menu.scss";
-import "./../styles/MealLog.scss";
-import MacrosChart from "../components/MacrosChart";
-import Legend from "../components/Legend";
-import Meals from "../components/Meals";
+
 import { InputText } from "primereact/inputtext";
 import { ProgressBar } from "primereact/progressbar";
-import DatePicker from "../components/DatePicker";
-import { getDailyLogs, updateDailyLog } from "../services/daily-log.service";
+
+import Meals from "../components/Meals";
+import Legend from "../components/Legend";
 import { DailyLog, Food } from "../schema.type";
-import { printDate, getDate } from "../util";
+import DatePicker from "../components/DatePicker";
+import MacrosChart from "../components/MacrosChart";
+import { getDateFromSessionStorage, printDate } from "../util";
+import { getDailyLogs, updateDailyLog } from "../services/daily-log.service";
+
+import "./../styles/Menu.scss";
+import "./../styles/MealLog.scss";
 
 const MealLog: React.FC = () => {
   const navigate = useNavigate();
-  const [date, setDate] = useState<Date>(getDate());
+
+  const [date, setDate] = useState<Date>(getDateFromSessionStorage());
   const [dailyLogs, setDailyLogs] = useState<DailyLog[]>([]);
   const [selectedDailyLog, setSelectedDailyLog] = useState<DailyLog | null>(null);
   const [calorieGoal, setCalorieGoal] = useState<number>(2000);
@@ -29,7 +34,7 @@ const MealLog: React.FC = () => {
 
   useEffect(() => {
     if (userId) {
-      getDailyLogs(onLoadDailyLogs, () => {});
+      getDailyLogs(onLoadDailyLogs);
     } else {
       setDailyLogs([]);
       setSelectedDailyLog(null);
@@ -50,6 +55,7 @@ const MealLog: React.FC = () => {
   const findSelectedDailyLog = (logs = dailyLogs) => {
     if (!userId) return;
     const formattedDate = printDate(date);
+
     const userLog = logs.find(
       (log) => log.uid === userId && printDate(new Date(log.date)) === formattedDate
     );
@@ -72,7 +78,7 @@ const MealLog: React.FC = () => {
   const handleDeleteFood = (foodIndex: number) => {
     if (!selectedDailyLog) return;
 
-    const updatedFoods = selectedDailyLog.foods.filter((_, index) => index !== foodIndex);
+    const updatedFoods = selectedDailyLog.foods.filter((food, index) => index !== foodIndex);
     const updatedLog = { ...selectedDailyLog, foods: updatedFoods };
 
     setSelectedDailyLog(updatedLog);
@@ -83,9 +89,7 @@ const MealLog: React.FC = () => {
     if (!selectedDailyLog) return;
 
     const updatedFoods = selectedDailyLog.foods.map((food, index) =>
-      index === foodIndex
-        ? { ...food, servingSize: { ...food.servingSize, value: newServingSize } }
-        : food
+      index === foodIndex ? { ...food, servings: newServingSize } : food
     );
 
     const updatedLog = { ...selectedDailyLog, foods: updatedFoods };
@@ -102,10 +106,10 @@ const MealLog: React.FC = () => {
 
     if (selectedDailyLog?.foods) {
       selectedDailyLog.foods.forEach((food: Food) => {
-        totalCalories += food.nutritionalInfo.calories.value * (food.servingSize.value || 1);
-        totalProtein += food.nutritionalInfo.protein.value * (food.servingSize.value || 1);
-        totalCarbs += food.nutritionalInfo.carbohydrates.value * (food.servingSize.value || 1);
-        totalFat += food.nutritionalInfo.fat.value * (food.servingSize.value || 1);
+        totalCalories += food.nutritionalInfo.calories.value * (food.servings || 1);
+        totalProtein += food.nutritionalInfo.protein.value * (food.servings || 1);
+        totalCarbs += food.nutritionalInfo.carbohydrates.value * (food.servings || 1);
+        totalFat += food.nutritionalInfo.fat.value * (food.servings || 1);
       });
     }
 
@@ -143,7 +147,7 @@ const MealLog: React.FC = () => {
           displayValueTemplate={valueTemplate}
         ></ProgressBar>
       </div>
-      <MacrosChart carbohydrates={totalCarbs} protein={totalProtein} fat={totalFat} />
+      <MacrosChart carbs={totalCarbs} protein={totalProtein} fat={totalFat} />
       <Legend />
       {selectedDailyLog?.foods.length ? (
         <Meals

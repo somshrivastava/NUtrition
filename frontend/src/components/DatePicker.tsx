@@ -1,32 +1,37 @@
 import React, { useEffect, useState } from "react";
-import "./../styles/Date.scss";
+
+import { getDateFromSessionStorage, printDate } from "../util";
 import LeftArrowSvg from "./../assets/left-arrow.svg";
 import RightArrowSvg from "./../assets/right-arrow.svg";
-import { printDate, getDate } from "../util";
 
-const DatePicker: React.FC<{
+import "./../styles/Date.scss";
+
+interface InputProps {
   onDateChange: (newDate: Date) => void;
-}> = ({ onDateChange }) => {
+}
+
+const DatePicker: React.FC<InputProps> = ({ onDateChange }) => {
   const [date, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
+    // if there is no date in session storage, set the date to today's date
     if (!sessionStorage.getItem("date")) {
-      // TODO: needs to be changed before deployment
       sessionStorage.setItem("date", JSON.stringify(new Date()));
-      // sessionStorage.setItem("date", JSON.stringify(new Date(2025, 1, 23)));
     }
-    const storedDate = getDate();
-    setDate(storedDate);
-    onDateChange(storedDate);
+    setDate(getDateFromSessionStorage());
+    onDateChange(getDateFromSessionStorage());
   }, []);
 
   const changeDate = (days: number) => {
-    if (!date) return;
-    const newDate = new Date(date);
-    newDate.setDate(date.getDate() + days);
-    sessionStorage.setItem("date", JSON.stringify(newDate));
-    setDate(newDate);
-    onDateChange(newDate);
+    if (date) {
+      // create a date object that is {days} ahead of the current date
+      const newDate = new Date(date);
+      newDate.setDate(date.getDate() + days);
+      // update the current date and send to the callback function
+      sessionStorage.setItem("date", JSON.stringify(newDate));
+      setDate(newDate);
+      onDateChange(newDate);
+    }
   };
 
   return (

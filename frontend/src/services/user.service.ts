@@ -1,7 +1,8 @@
-import { NutritionUser } from "../schema.type";
+import { v4 as uuidv4 } from "uuid";
+
 import supabase from "../supabase";
 import { timestamp } from "../util";
-import { v4 as uuidv4 } from "uuid";
+import { NutritionUser } from "../schema.type";
 
 // Read all users
 export const getUsers = async (callback: (users: NutritionUser[]) => void) => {

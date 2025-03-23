@@ -15,6 +15,21 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [newServingSize, setNewServingSize] = useState<number | null>(null);
 
+  const editFood = (index: number, meal: Food): React.MouseEventHandler<HTMLButtonElement> => {
+    return () => {
+      setEditingIndex(index);
+      setNewServingSize(meal.servings);
+    };
+  };
+
+  const saveFood = (index: number, meal: Food): React.MouseEventHandler<HTMLButtonElement> => {
+    return () => {
+      onEdit(index, newServingSize !== null ? newServingSize : meal.servings);
+      setEditingIndex(null);
+      setNewServingSize(null);
+    };
+  };
+
   return (
     <div className="page-meals">
       <h1 className="page-meals-title">{title}</h1>
@@ -45,24 +60,14 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
                     <Button
                       className="page-meals-actions-button"
                       icon="pi pi-check"
-                      onClick={() => {
-                        onEdit(
-                          index,
-                          newServingSize !== null ? newServingSize : meal.servingSize.value
-                        );
-                        setEditingIndex(null);
-                        setNewServingSize(null);
-                      }}
+                      onClick={saveFood(index, meal)}
                     />
                   </>
                 ) : (
                   <Button
                     className="page-meals-actions-button"
                     icon="pi pi-pencil"
-                    onClick={() => {
-                      setEditingIndex(index);
-                      setNewServingSize(meal.servingSize.value);
-                    }}
+                    onClick={editFood(index, meal)}
                   />
                 )}
                 <Button
@@ -76,16 +81,13 @@ const Meals: React.FC<InputProps> = ({ title, meals, onDelete, onEdit }) => {
             {editingIndex === index ? (
               <InputNumber
                 className="page-meals-item-input"
-                value={newServingSize !== null ? newServingSize : meal.servingSize.value}
-                onValueChange={(e) => setNewServingSize(e.value || meal.servingSize.value)}
+                value={newServingSize !== null ? newServingSize : meal.servings}
+                onValueChange={(e) => setNewServingSize(e.value || meal.servings)}
                 min={1}
                 step={1}
-                suffix={` ${meal.servingSize.unit}`}
               />
             ) : (
-              <p className="page-meals-item-serving-size">
-                Serving Size: {meal.servingSize.value} {meal.servingSize.unit}
-              </p>
+              <p className="page-meals-item-serving-size">Servings: {meal.servings}</p>
             )}
           </div>
         ))}
