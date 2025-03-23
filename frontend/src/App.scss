@@ -1,6 +1,10 @@
 @use "./styles/variables" as *;
 @import "primeicons/primeicons.css";
 
+html {
+  font-size: 15px;
+}
+
 .page {
   padding: 1.25rem 1.25rem;
 }
